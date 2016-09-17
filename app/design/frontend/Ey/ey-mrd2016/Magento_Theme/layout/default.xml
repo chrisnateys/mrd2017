@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<link rel="stylesheet" src="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" src_type="url" type="text/css"/>
+		<link src="js/ey-script.js"/>
+		<css src="css/ey-style.css"/>
+		<link src="http://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" src_type="url" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<referenceContainer name="header-wrapper">
+			<container name="header-right" after="logo" htmlClass="header-right" htmlTag="div">
+				<block class="Magento\Framework\View\Element\Template" name="headerQuestionstxt" template="Magento_Theme::Ey/header-questions.phtml"/>
+			</container>
+		</referenceContainer>
+		<referenceContainer name="footer-container">
+			<container name="top-footer-wrapper" as="top-footer-wrapper" htmlTag="div" htmlClass="footer-top clearfix" before="-">
+				<container name="topfooter" as="topfooter" label="Page Footer" htmlTag="div" htmlClass="footer content">
+					<block class="Magento\Framework\View\Element\Template" name="footer-accordion" template="Magento_Theme::Ey/footer-accordion-links.phtml"/>
+				</container>
+			</container>
+
+            <container name="footer-gutter" as="footer-gutter" htmlTag="div" htmlClass="footer-gutter clearfix" after="-">
+                <block class="Magento\Framework\View\Element\Template" name="footerGutter" template="Magento_Theme::Ey/footer-gutter.phtml"/>
+            </container>
+		</referenceContainer>
+		<referenceContainer name="footer">
+			<container name="social-links" as="social-links" htmlTag="div" htmlClass="social-links" before="-">
+				<block class="Magento\Framework\View\Element\Template" name="footer-social" template="Magento_Theme::Ey/social-links.phtml"/>
+			</container>
+			<container name="not-newsletter" as="not-newsletter" htmlTag="div" htmlClass="not-newsletter" after="social-links">
+				<block class="Magento\Framework\View\Element\Template" name="notNewsletter" template="Magento_Theme::Ey/not-newsletter.phtml"/>
+			</container>
+		</referenceContainer>
+		<move element="header.links" destination="header-right" after="headerQuestionstxt"/>
+		<referenceBlock name="header.panel" remove="true"/>
+		<referenceBlock name="top.search" remove="true"/>
+		<referenceBlock name="footer_links" remove="true"/>
+		<referenceBlock name="before.body.end" remove="true"/>
+	</body>
+</page>
