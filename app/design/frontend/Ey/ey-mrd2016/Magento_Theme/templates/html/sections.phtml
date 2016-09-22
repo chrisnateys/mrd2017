@@ -36,6 +36,7 @@ $groupBehavior = $block->getGroupBehaviour() ? $block->getGroupBehaviour() : '{"
                 <div class="section-item-content <?php /* @escapeNotVerified */ echo $groupCss ?>-item-content" id="<?php /* @escapeNotVerified */ echo $alias; ?>" data-role="content"><?php /* @escapeNotVerified */ echo $html; ?></div>
             <?php endforeach;?>
             <div class="mobile-menu-button"><span>Menu</span></div>
+            <div class="mobile-menu-close">Close</div>
 <!-- START SEARCH CODE -->
 			<?php $helper = $this->helper('Magento\Search\Helper\Data'); ?>
 			<div class="block block-search">

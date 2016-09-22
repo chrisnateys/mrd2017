@@ -24,7 +24,6 @@
 					<block class="Magento\Framework\View\Element\Template" name="footer-accordion" template="Magento_Theme::Ey/footer-accordion-links.phtml"/>
 				</container>
 			</container>
-
             <container name="footer-gutter" as="footer-gutter" htmlTag="div" htmlClass="footer-gutter clearfix" after="-">
                 <block class="Magento\Framework\View\Element\Template" name="footerGutter" template="Magento_Theme::Ey/footer-gutter.phtml"/>
             </container>

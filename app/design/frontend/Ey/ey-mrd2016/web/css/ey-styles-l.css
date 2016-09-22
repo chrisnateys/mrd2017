@@ -572,10 +572,11 @@ print {
     .nav-sections-item-title {
         display: none
     }
-    .nav-sections-item-content {
-        /*display: block !important*/
-        display: inline-block;
-    }
+.nav-sections-item-content {
+	display: inline-block;
+	position: relative;
+	background-color: transparent;
+}
     .nav-sections-item-content > * {
         display: none
     }
