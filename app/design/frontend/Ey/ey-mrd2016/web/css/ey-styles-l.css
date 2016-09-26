@@ -429,10 +429,11 @@ print {
         left: 0;
         position: absolute
     }
-    h1 {
-        font-size: 40px;
-        margin-bottom: 40px
-    }
+h1 {
+	font-size: 30px;
+	margin-bottom: 20px;
+	color: #1d1d1d;
+}
     .navigation,
     .breadcrumbs,
     .page-header .header.panel,
@@ -567,7 +568,7 @@ print {
         flex-shrink: 0;
         -webkit-flex-basis: auto;
         flex-basis: auto;
-        margin-bottom: 25px
+        margin-bottom: 20px
     }
     .nav-sections-item-title {
         display: none
@@ -576,6 +577,11 @@ print {
 	display: inline-block;
 	position: relative;
 	background-color: transparent;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
 }
     .nav-sections-item-content > * {
         display: none
@@ -618,26 +624,29 @@ print {
     }
 .navigation .level0 > .level-top {
 	color: #575757;
-	line-height: 47px;
+	line-height: 37px;
 	padding: 0 5px;
 	text-decoration: none;
 	box-sizing: border-box;
 	position: relative;
+	border-bottom: 3px solid transparent;
+	display: inline-block;
+	border-top: 3px solid transparent;
 }
     .navigation .level0 > .level-top:hover,
     .navigation .level0 > .level-top.ui-state-focus {
         color: #333;
         text-decoration: none
     }
-    .navigation .level0.active > .level-top,
-    .navigation .level0.has-active > .level-top {
-        border-color: #ff5501;
-        border-style: solid;
-        border-width: 0 0 3px;
-        color: #333;
-        text-decoration: none;
-        display: inline-block
-    }
+.navigation .level0.active > .level-top, .navigation .level0.has-active > .level-top {
+	border-color: #ff5501;
+	border-style: solid;
+	border-width: 3px 0 3px;
+	color: #333;
+	text-decoration: none;
+	display: inline-block;
+	border-top: 3px solid transparent;
+}
     .navigation .level0.parent:hover > .submenu {
         overflow: visible !important
     }
@@ -1052,7 +1061,7 @@ print {
         position: static
     }
     .products.wrapper ~ .toolbar .pages {
-        float: left;
+        float: right;
         margin-bottom: 0
     }
     .modes {
@@ -1121,7 +1130,14 @@ print {
         color: #7d7d7d
     }
     .page-products .sorter {
-        position: static
+    	top:0;
+    	right: 0px;
+    }
+    .toolbar-categoryname {
+    	float: left;
+    }
+    .products.wrapper ~ .toolbar-categoryname {
+    	display: none;
     }
     .mode-list:before {
         content: '\e60b'
@@ -1129,9 +1145,9 @@ print {
     .limiter {
         float: right
     }
-    .products.wrapper ~ .toolbar .limiter {
+/*    .products.wrapper ~ .toolbar .limiter {
         display: block
-    }
+    }*/
     .product-info-main .page-title-wrapper h1 {
         margin-bottom: 15px
     }
@@ -2199,14 +2215,14 @@ print {
     .filter-actions {
         margin-bottom: 30px
     }
-    .filter.active .filter-options,
+/*    .filter.active .filter-options,
     .filter-options {
         background: transparent;
         clear: both;
         display: block;
         overflow: initial;
         position: static
-    }
+    }*/
     .filter-subtitle {
         display: block;
         position: static
@@ -2224,9 +2240,9 @@ print {
         position: relative;
         z-index: 1
     }
-    .page-layout-1column .filter.block {
+/*    .page-layout-1column .filter.block {
         border-top: 1px solid #ccc
-    }
+    }*/
     .page-layout-1column .filter-content {
         margin-top: 10px
     }

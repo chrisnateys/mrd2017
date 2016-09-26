@@ -26,4 +26,17 @@
 <div class="mobile-questions">
 <?php echo $this->getLayout()->createBlock('Magento\Framework\View\Element\Template')->setTemplate('Magento_Theme::Ey/header-questions.phtml')->toHtml();?>
 </div>
+<ul class="mobile-userops">
 <?php echo $this->getLayout()->createBlock('Magento\Customer\Block\Account\AuthorizationLink')->setTemplate('account/link/authorization.phtml')->toHtml();?>
+<li>
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$customerSession = $objectManager->get('Magento\Customer\Model\Session');
+if($customerSession->isLoggedIn()) {
+   echo '<a href="'.$this->getBaseUrl().'customer/account/">My Account</a>';
+} else {
+	echo '<a href="'.$this->getBaseUrl().'customer/account/create/">Create An Account</a>';
+}
+?>
+</li>
+</ul>

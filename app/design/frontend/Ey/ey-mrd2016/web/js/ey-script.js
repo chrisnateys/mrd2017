@@ -9,4 +9,10 @@ require(["jquery"], function($){
 			jQuery(this).next('ul').slideToggle();
 		}
 	});
+	jQuery('.mobile-menu-button').click(function(){
+		jQuery('.nav-sections-item-content').toggleClass('soHotRightNow');
+	});
+	jQuery('.menu-close').click(function(){
+		jQuery('.nav-sections-item-content').toggleClass('soHotRightNow');
+	});
 });
