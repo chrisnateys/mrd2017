@@ -13,6 +13,14 @@
 		<link src="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" src_type="url" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
+		<referenceBlock name="logo">
+			<arguments>
+				<argument name="logo_file" xsi:type="string">images/sf/mrd-logo.png</argument>
+				<argument name="logo_img_width" xsi:type="number">250</argument>
+				<argument name="logo_img_height" xsi:type="number">95</argument>
+			</arguments>
+		</referenceBlock>
+
 		<referenceContainer name="header-wrapper">
 			<container name="header-right" after="logo" htmlClass="header-right" htmlTag="div">
 				<block class="Magento\Framework\View\Element\Template" name="headerQuestionstxt" template="Magento_Theme::Ey/header-questions.phtml"/>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.main.title" remove="false" />
+
+        <referenceContainer name="catalog.leftnav" remove="true"/>
+        <referenceContainer name="div.sidebar.additional" remove="true" />
+
+        <referenceContainer name="columns.top">
+            <container name="ey.subcat.container" htmlTag="div" htmlClass="subcat-container" after="-">
+                <block class="Ey\CategoryOne\Block\Category\View" name="sub.cat" template="Ey_CategoryOne::sub-cats.phtml" />
+            </container>
+        </referenceContainer>
+    </body>
+</page>

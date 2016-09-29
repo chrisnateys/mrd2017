@@ -1,0 +1,43 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+
+
+<div class="subcategories-list">
+    <?php
+
+    $subcategories = $block->getCategoryList();
+
+    foreach ($subcategories as $subcat) {
+        if ($subcat->getIsActive()) {
+
+            $subcaturl = $subcat->getUrl();
+            $subcatname = $subcat->getName();
+            $_imgHtml = '';
+            $html='';
+
+            $_imgHtml = $block->getSubCategoryImage($subcat);
+
+            $html = '<div class="subcat"><div class="subcat-img">';
+            $html .= '<a href="'. $subcaturl . '" >';
+            $html .= $_imgHtml;
+            $html .= '</a></div>';
+            $html .= '<div class="subcat-name">';
+            $html .= '<a href="'. $subcaturl . '" >';
+            $html .= $subcatname;
+            $html .= '</a></div></div>';
+
+            echo $html;
+
+
+        }
+    }
+
+    ?>
+</div>
