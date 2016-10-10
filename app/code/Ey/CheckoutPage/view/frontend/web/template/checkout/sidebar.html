@@ -1,0 +1,48 @@
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+
+<div id="opc-sidebar"
+     data-bind="afterRender:setModalElement, mageInit: {
+    'Magento_Ui/js/modal/modal':{
+        'type': 'custom',
+        'modalClass': 'opc-sidebar opc-summary-wrapper',
+        'wrapperClass': 'checkout-container',
+        'parentModalClass': '_has-modal-custom',
+        'responsive': true,
+        'responsiveClass': 'custom-slide',
+        'overlayClass': 'modal-custom-overlay',
+        'buttons': []
+    }}">
+    <div class="opc-secure-shopping">
+        <img src="http://magento2.gaudy/pub/static/frontend/Magento/gaudy/en_US/images/cart/badge-secureshopping-min.png" />
+    </div>
+
+    <!-- ko foreach: getRegion('summary') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    <!--/ko-->
+
+    <div class="opc-block-shipping-information">
+        <!-- ko foreach: getRegion('shipping-information') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <!--/ko-->
+    </div>
+    <div class="opc-trust-column">
+        <div class="trust-col-div trust-pink">
+            <div class="trust-title">Proverbs 31:25</div>
+            <div class="trust-text">She is clothed in Strength & Dignity & Laughs without fear of the future.</div>
+        </div>
+        <div class="trust-col-div trust-ship">
+            <div class="trust-title"><i>FREE Shipping over $99</i></div>
+            <div class="trust-text"><p>Get super fast, free shipping on orders over $99 shipped anywhere in the continental U.S.</p><p>We ship next day!</p></div>
+        </div>
+        <div class="trust-col-div trust-help">
+            <div class="trust-title"><i>We’re here to help!</i></div>
+            <div class="trust-text"><p>Our friendly staff is here to help you with any questions you might have. We want your shopping experience to be one to remember!</p><p>Call Toll-Free (903) 894-7102</p></div>
+        </div>
+    </div>
+</div>

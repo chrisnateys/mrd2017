@@ -1,4 +1,4 @@
-html,body,body div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,figure,footer,header,menu,nav,section,time,mark,audio,video,details,summary{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;background:transparent}
+html,body,body div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,figure,footer,header,menu,nav,section,time,mark,audio,video,details,summary{margin:0;padding:0;border:0;vertical-align:baseline;background:transparent}
 article,aside,figure,footer,header,nav,section,details,summary{display:block}
 html{height:100%;width:100%;box-sizing:border-box}
 *{box-sizing:inherit}
@@ -45,10 +45,10 @@ button,input[type=button]{width:auto;overflow:visible}
 	.grid-item.large-five {display: inline-block; width: 20%; clear: none;}
 }
 
-body{font-family:"Noto Sans"; height:100%}
+body{font-family: "Noto Sans", sans-serif; height:100%; font-size: 14px;}
 ul.compare.wrapper{display:none}
 .content{padding-left:10px;padding-right:10px}
-.minicart-wrapper .action.showcart .text{display:inline-block;width:auto;height:auto;color:#000;font-size:20px;overflow:auto;position:relative}
+.minicart-wrapper .action .text{display:inline-block;width:auto;height:auto;color:#000;font-size:20px;overflow:auto;position:relative}
 .footer-top{background-color:#1d1d1f}
 .block.newsletter .field .control:before{content:"";display:none}
 .nav-sections{background-color:#ebe2c9}
@@ -68,15 +68,17 @@ ul.compare.wrapper{display:none}
 .page-header{background-color:#1d1d1d;margin:0}
 header.page-header .nav-toggle{display:none}
 header.page-header .logo{margin:0;max-width:calc(100% - 75px);max-height:60px;display:inline-block;vertical-align:middle;position:static;float:none}
-header.page-header .logo img{display:inline-block;width:100%;height:auto;max-height:60px}
+header.page-header .logo img{display:inline-block; height:auto; max-height:60px; width: auto;}
 .authorization-link:after{content:"|";color:#f7d3ad}
 header.page-header .content{padding:20px 10px}
 header.page-header .header-right{display:none}
 header.page-header .minicart-wrapper{margin-top:0}
-.minicart-wrapper .action.showcart{color:#82f0e9}
-.minicart-wrapper .action.showcart:hover{color:#333}
-.minicart-wrapper .action.showcart .text{color:inherit;font-size:15px;text-transform:uppercase}
-.minicart-wrapper .action.showcart:before{color:#82f0e9;font-size:24px;display:block}
+.minicart-wrapper .action{color:#82f0e9; text-decoration: none;}
+.minicart-wrapper .action .text{color:inherit;font-size:20px;text-transform:uppercase;}
+.minicart-wrapper .action:before{color:#82f0e9;font-size:24px;display:block; content: url("../images/sf/cart-icon.png"); text-align: center; line-height: 1;}
+.minicart-wrapper .action:hover:before{color:#82f0e9;}
+.minicart-wrapper .action.active::before{color:#82f0e9;font-size:24px;}
+
 .nav-sections{position:static}
 .footer-top .content{padding-top:10px;padding-bottom:10px}
 .footer-top h4{color:#82f0e9;font-size:15px;text-transform:uppercase;cursor:pointer;padding:20px 0}
@@ -129,7 +131,7 @@ header.page-header .minicart-wrapper{margin-top:0}
 .mobile-userops li{display:inline}
 .product-item-actions .actions-secondary > .action.tocompare{display:none}
 
-
+/* Sp 2 */
 .sorter-label{font-size:12px;color:#1d1d1d}
 .filter-title strong{background-color:#fff;box-shadow:none;border:1px solid #373739;font-size:12px;border-radius:0;margin-top:10px}
 span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6e6e}
@@ -180,7 +182,8 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
     .footer-top h4{padding: 10px 0}
 }
 @media all and (min-width: 980px) {
-    .minicart-wrapper .action.showcart::before{display: inline-block; vertical-align: bottom}
+    .minicart-wrapper .action::before, .minicart-wrapper .action.active::before{display: inline-block; vertical-align: top; font-size: 20px; margin-right: 3px; margin-top: 4px;}
+    .minicart-wrapper .action.active:active::before{color: #82f0e9;}
     header.page-header .header-right{width: calc(100% - 440px);}
     header.page-header .minicart-wrapper{margin: 22px 0}
 
@@ -213,11 +216,29 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
 .subcat-name a{color: #1d1d1d;  display: block; padding: 3px 0 6px; text-decoration: none; line-height: 1.1; font-size: 15px;}
 
 
+/* IP */
+.product-info-main .product-options-bottom .price-box .price-container .price, .product-info-main .product-info-price .price-box .price-container .price{font-size: 24px; line-height: 1;}
+
+
+/* Cart */
+.checkout-cart-index .minicart-wrapper, .checkout-index-index .minicart-wrapper,
+.cart-checkout .header.links, .cart-checkout .page-footer > .footer.content{display: none;}
+.cart-checkout header.page-header{border-bottom: 10px solid #ebe2c9; margin-bottom: 20px;}
+.cart-checkout header.page-header .logo{width: 30%}
+.cart-quick-easy{display: inline-block; color: #82f0e9; font-size: 25px; margin-left: 12.5%; vertical-align: middle}
+.cart-checkout header.page-header .header-right{ float: right; padding: 0; width: auto; padding: 25px 0}
+.cart-checkout .page-footer{border-top:1px solid #d7d7d7;}
+
 @media all and (max-width: 979px){
     /* SP 1 */
     .subcat{width: 24%}
     .subcat-img{height: 200px}
     .subcat-img a img{max-height: 180px}
+
+    /* Cart */
+    .cart-checkout header.page-header .header-right{display: none;}
+    .cart-checkout header.page-header .logo{width: 50%;}
+    .cart-quick-easy{float: right; text-align: right; margin: 0; padding:16px 0;}
 }
 
 @media all and (max-width: 767px){
@@ -228,5 +249,10 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
     .subcat{width: 49%; max-width: 165px;}
     .subcat-img{height: 150px}
     .subcat-img a img{max-height: 130px}
+
+    /* Cart */
+    .cart-checkout header.page-header .logo { width: 55%;}
+    .cart-quick-easy{font-size: 16px; line-height: 1.2; padding: 0;}
+    .cart-quick-easy b{display: block}
 
 }
