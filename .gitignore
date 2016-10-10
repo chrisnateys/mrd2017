@@ -30,3 +30,5 @@ app/.gitignore
 app/README.md
 package.json.sample
 php.ini.sample
+.idea/*
+.user.ini

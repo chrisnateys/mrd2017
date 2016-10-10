@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="checkout_cart_item_renderers"/>
+    <body>
+        <attribute name="class" value="cart-checkout"/>
+        <referenceContainer name="top.search" remove="true" />
+        <referenceContainer name="page.top" remove="true" />
+        <referenceContainer name="top-footer-wrapper" remove="true" />
+        <referenceContainer name="topfooter" remove="true" />
+
+        <referenceContainer name="header-wrapper">
+            <container name="ey.quick.easy.container" htmlTag="div" htmlClass="cart-quick-easy" after="logo">
+                <block class="Magento\Framework\View\Element\Template" name="cart.quick.easy"
+                       template="Magento_Checkout::Ey/cart-quick.phtml" />
+            </container>
+        </referenceContainer>
+    </body>
+</page>
