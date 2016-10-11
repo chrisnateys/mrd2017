@@ -17,6 +17,12 @@
 		<link src="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" src_type="url" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
+        <move element="header.links" destination="header-right" after="headerQuestionstxt"/>
+        <referenceBlock name="header.panel" remove="true"/>
+        <referenceBlock name="top.search" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="before.body.end" remove="true"/>
+
 		<referenceBlock name="logo">
 			<arguments>
 				<argument name="logo_file" xsi:type="string">images/sf/mrd-logo.png</argument>
@@ -48,10 +54,6 @@
 				<block class="Magento\Framework\View\Element\Template" name="notNewsletter" template="Magento_Theme::Ey/not-newsletter.phtml"/>
 			</container>
 		</referenceContainer>
-		<move element="header.links" destination="header-right" after="headerQuestionstxt"/>
-		<referenceBlock name="header.panel" remove="true"/>
-		<referenceBlock name="top.search" remove="true"/>
-		<referenceBlock name="footer_links" remove="true"/>
-		<referenceBlock name="before.body.end" remove="true"/>
+
 	</body>
 </page>
