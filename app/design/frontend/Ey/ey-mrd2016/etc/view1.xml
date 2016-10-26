@@ -22,11 +22,11 @@
             </image>
             <image id="category_page_grid" type="small_image">
                 <width>240</width>
-                <height>250</height>
+                <height>300</height>
             </image>
             <image id="category_page_list" type="small_image">
                 <width>240</width>
-                <height>250</height>
+                <height>300</height>
             </image>
             <image id="customer_account_my_tags_tag_view" type="small_image">
                 <width>100</width>
@@ -178,12 +178,7 @@
                 <height>300</height>
             </image>
         </images>
-	        <image id="pre_order_image" type="small_image">
-	            <width>285</width>
-	            <height>30</height>
-	        </image>
-	    </images>
-	</media>
+    </media>
     <vars module="Magento_Catalog">
 
         <!-- Gallery and magnifier theme settings. Start -->
@@ -194,7 +189,7 @@
             <var name="arrows">true</var> <!-- Turn on/off arrows on the sides preview (true/false) -->
             <var name="caption">false</var> <!-- Display alt text as image title (true/false) -->
             <var name="allowfullscreen">true</var> <!-- Turn on/off fullscreen (true/false) -->
-            <var name="navdir">horizontal</var> <!-- Sliding direction of thumbnails (horizontal/vertical) -->
+            <var name="navdir">vertical</var> <!-- Sliding direction of thumbnails (horizontal/vertical) -->
             <var name="navarrows">true</var> <!-- Turn on/off on the thumbs navigation sides arrows(true/false) -->
             <var name="navtype">slides</var> <!-- Sliding type of thumbnails (slides/thumbs) -->
             <var name="transition">

@@ -14,11 +14,23 @@
         <referenceContainer name="top-footer-wrapper" remove="true" />
         <referenceContainer name="topfooter" remove="true" />
 
+		<referenceContainer name="cart.summary">
+			<container name="ey.secure.shopping" htmlTag="div" htmlClass="cart-security" after="-">
+				<block class="Magento\Framework\View\Element\Template" name="cart.security"
+				template="Magento_Checkout::Ey/security-quick.phtml" />
+			</container>
+		</referenceContainer>
         <referenceContainer name="header-wrapper">
             <container name="ey.quick.easy.container" htmlTag="div" htmlClass="cart-quick-easy" after="logo">
                 <block class="Magento\Framework\View\Element\Template" name="cart.quick.easy"
                        template="Magento_Checkout::Ey/cart-quick.phtml" />
             </container>
+        </referenceContainer>
+        <referenceContainer name="content">
+        	<container name="ey.quick.easy.bottom.container" htmlTag="div" htmlClass="cart-bottom-quick-easy" after="-">
+					<block class="Magento\Framework\View\Element\Template" name="cart.quick.easy.bottom"
+						template="Magento_Checkout::Ey/security-quick.phtml" />
+        	</container>
         </referenceContainer>
     </body>
 </page>

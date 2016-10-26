@@ -378,11 +378,11 @@ input[type="datetime"],
 input[type="email"] {
     background: #fff;
     background-clip: padding-box;
-    border: 1px solid #c2c2c2;
+    border: 1px solid #afafaf;
     border-radius: 1px;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 14px;
-    height: 32px;
+    height: 36px;
     line-height: 1.42857143;
     padding: 0 9px;
     vertical-align: baseline;
@@ -470,7 +470,7 @@ select[multiple="multiple"] {
 textarea {
     background: #fff;
     background-clip: padding-box;
-    border: 1px solid #c2c2c2;
+    border: 1px solid #afafaf;
     border-radius: 1px;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -1136,7 +1136,7 @@ fieldset[disabled] .form.send.friend .action.remove {
 .paypal-review-discount .actions-toolbar .action.cancel:hover,
 .cart-discount .actions-toolbar .action.primary:hover,
 .cart-discount .actions-toolbar .action.cancel:hover {
-    background: #e1e1e1;
+    background: #e9e9e9;
     border: 1px solid #ccc;
     color: #333
 }
@@ -2597,6 +2597,9 @@ fieldset[disabled] .form.send.friend .action.remove {
     border-top: 1px solid #ccc;
     padding-top: 10px
 }
+.cart-totals {
+	margin: 0 20px;
+}
 .cart-totals tbody .mark,
 .cart-totals tfoot .mark,
 .opc-block-summary .table-totals tbody .mark,
@@ -2621,17 +2624,23 @@ fieldset[disabled] .form.send.friend .action.remove {
 .opc-block-summary .table-totals .grand td {
     padding: 11px 0
 }
-.cart-totals .grand strong,
-.opc-block-summary .table-totals .grand strong {
-    display: inline-block;
-    font-weight: 600;
-    padding: 3px 0 0
+.cart-totals .grand strong, .opc-block-summary .table-totals .grand strong {
+	display: inline-block;
+	font-weight: 600;
+	padding: 3px 0 0;
+	font-size: 18px;
+	color: #363636;
+	font-weight: normal;
 }
-.cart-totals .grand .mark,
-.opc-block-summary .table-totals .grand .mark {
-    font-size: 1.8rem;
-    border-top: 1px solid #ccc;
-    padding-right: 10px
+.cart-totals .grand .mark, .opc-block-summary .table-totals .grand .mark {
+	font-size: 1.8rem;
+	border-top: 1px solid #ccc;
+	padding: 0 10px 0 0;
+	vertical-align: middle;
+}
+.cart-totals .grand strong .price {
+	font-size: 24px;
+	color: #58bcb6;
 }
 .cart-totals .grand .amount,
 .opc-block-summary .table-totals .grand .amount {
@@ -2645,6 +2654,9 @@ fieldset[disabled] .form.send.friend .action.remove {
 .cart-totals tbody tr:last-child td,
 .opc-block-summary .table-totals tbody tr:last-child td {
     padding-bottom: 19px
+}
+.cart-totals tbody tr:last-child td, .cart-totals .grand .mark {
+	padding: 10px 0;
 }
 .cart-totals .totals-tax-summary .mark,
 .cart-totals .totals-tax-summary .amount,
@@ -2723,6 +2735,12 @@ fieldset[disabled] .form.send.friend .action.remove {
 .cart-discount .block > .title strong {
     color: #1979c3;
     font-weight: 400
+}
+.cart-discount .block > .title strong {
+	color: #1d1d1d;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 20px !important;
 }
 .paypal-review-discount .actions-toolbar,
 .cart-discount .actions-toolbar {
@@ -3496,9 +3514,9 @@ select {
     appearance: none;
     background: #fff url('../images/select-bg.svg') no-repeat 100% 45%;
     background-size: 30px 60px;
-    border: 1px solid #ccc;
-    height: 32px;
-    padding-right: 70px;
+    border: 1px solid #afafaf;
+    height: 36px;
+    padding-right: 30px;
     text-indent: .01em;
     text-overflow: ''
 }
@@ -3665,13 +3683,13 @@ fieldset[disabled] ._has-datepicker ~ .ui-datepicker-trigger {
 }
 button,
 a.action.primary {
-    border-radius: 3px
+    border-radius: 0px;
 }
 button:not(.primary) {
-    box-shadow: inset 0 1px 0 0 #fff, inset 0 -1px 0 0 rgba(204, 204, 204, 0.3)
+    /*box-shadow: inset 0 1px 0 0 #fff, inset 0 -1px 0 0 rgba(204, 204, 204, 0.3)*/
 }
 button:not(.primary):active {
-    box-shadow: inset 0 1px 0 0 rgba(204, 204, 204, 0.8), inset 0 -1px 0 0 rgba(204, 204, 204, 0.3)
+    /*box-shadow: inset 0 1px 0 0 rgba(204, 204, 204, 0.8), inset 0 -1px 0 0 rgba(204, 204, 204, 0.3)*/
 }
 body:not(._keyfocus) button:focus {
     box-shadow: none
@@ -5168,7 +5186,8 @@ fieldset[disabled] .action-braintree-paypal-logo {
 }
 .product-item-info {
     max-width: 100%;
-    width: 152px
+    /*width: 152px*/
+    text-align: center;
 }
 .page-products .product-item-info {
     width: 240px;
@@ -5233,10 +5252,12 @@ fieldset[disabled] .action-braintree-paypal-logo {
     white-space: nowrap
 }
 .column.main .product-items {
-    margin-left: -20px
+    /*margin-left: -20px;*/
+    margin-left: 0;
+    text-align: center;
 }
 .column.main .product-item {
-    padding-left: 20px
+    padding-left: 0px;
 }
 .price-container .price {
     font-size: 1.4rem
@@ -5336,8 +5357,12 @@ fieldset[disabled] .action-braintree-paypal-logo {
     float: right
 }
 .page-products .sorter {
-    float: right;
-    margin-right: 40px;
+    float: none;
+    margin-right: 0px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    text-align: right;
 }
 .products.wrapper ~ .toolbar .sorter {
     display: none
@@ -5432,6 +5457,7 @@ fieldset[disabled] .action-braintree-paypal-logo {
 	display: inline-block;
 	max-width: 100%;
 	border: 1px solid #e9e9e9;
+	/*width: 100% !important;*/
 }
 .product-image-wrapper {
     display: block;
@@ -5483,7 +5509,7 @@ fieldset[disabled] .action-braintree-paypal-logo {
 }
 .product.info.detailed {
     clear: both;
-    margin-bottom: 30px
+    margin-bottom: 50px
 }
 .product.info.detailed .additional-attributes {
     width: auto;
@@ -5509,7 +5535,7 @@ fieldset[disabled] .action-braintree-paypal-logo {
 }
 .product-info-main .product-info-price {
     color: #575757;
-    border-bottom: 1px solid #c1c1c1;
+    /*border-bottom: 1px solid #c1c1c1;*/
     display: table;
     margin-bottom: 15px;
     width: 100%
@@ -5521,7 +5547,7 @@ fieldset[disabled] .action-braintree-paypal-logo {
 }
 .product-info-main .product-info-price .price-box .price-container > span {
     display: block;
-    margin-bottom: 5px
+    margin-bottom: 0;
 }
 .product-info-main .product-info-price .price-box .price-container > span:last-child {
     margin-bottom: 0
@@ -5530,6 +5556,14 @@ fieldset[disabled] .action-braintree-paypal-logo {
 .product-info-main .product-info-price .weee + .price-excluding-tax,
 .product-info-main .product-info-price .weee {
     font-size: 1.4rem
+}
+.product-info-price .price-box .price-container.price-final_price {
+	font-size: 17px;
+	color: #afafaf;
+}
+.product-info-main .product-info-price .price-box .old-price .price-container.price-final_price .price {
+	font-size: 17px;
+	text-decoration: line-through;
 }
 .product-info-main .product-info-price .price-including-tax + .price-excluding-tax .price,
 .product-info-main .product-info-price .weee + .price-excluding-tax .price,
@@ -5554,11 +5588,11 @@ fieldset[disabled] .action-braintree-paypal-logo {
     white-space: nowrap
 }
 .product-info-main .product-info-stock-sku {
-    display: table-cell;
-    padding-bottom: 10px;
-    padding-left: 10%;
-    text-align: right;
-    vertical-align: top
+	display: block;
+	padding-bottom: 30px;
+	padding-left: 0;
+	text-align: left;
+	vertical-align: top;
 }
 .product-info-main .stock {
     margin: 0 0 3px
@@ -5569,8 +5603,11 @@ fieldset[disabled] .action-braintree-paypal-logo {
     text-transform: uppercase
 }
 .product-info-main .product.attribute.sku {
-    word-break: break-all;
-    word-wrap: break-word
+	word-break: break-all;
+	word-wrap: break-word;
+	margin-top: 14px;
+	border-bottom: 1px solid #e9e9e9;
+	padding-bottom: 15px;
 }
 .product-info-main .product-add-form {
     clear: both;
@@ -5578,13 +5615,19 @@ fieldset[disabled] .action-braintree-paypal-logo {
 }
 .product-info-main .product.attribute.sku .type {
     font-weight: normal;
-    margin-right: 5px
+    margin-right: 5px;
+    font-size: 12px;
+    color: #8f8f8f;
+    display: inline-block;
 }
 .product-info-main .product.attribute.sku .type:after {
     content: '#:'
 }
 .product-info-main .product.attribute.sku .value {
-    display: inline-block
+    display: inline-block;
+    font-size:12px;
+    color: #8f8f8f;
+    text-transform: uppercase;
 }
 .product-info-main .product.attribute.overview {
     margin: 20px 0
@@ -5915,7 +5958,7 @@ body.catalog-product-compare-index .action.print {
     z-index: 1
 }
 .block.related .related-available .product-item-name {
-    margin-left: 20px
+    margin-left: 0px
 }
 .block.related .field.choice {
     left: 0;
@@ -6079,15 +6122,17 @@ body.catalog-product-compare-index .action.print {
     padding-right: 15px
 }
 .cart-summary {
-    background: #f5f5f5;
+    background: #f6f6f6;
     margin-bottom: 25px;
-    padding: 1px 0 25px
+    padding: 10px 0 25px;
+    border-top: 1px solid #e1b688;
 }
 .cart-summary > .title {
     font-size: 2.4rem;
     display: none;
     font-weight: 300;
-    margin: 12px 0
+    margin: 12px 0;
+    padding: 0px 20px;
 }
 .cart-summary .block form:not(:last-of-type) .fieldset {
     margin: 0 0 25px
@@ -6123,10 +6168,11 @@ body.catalog-product-compare-index .action.print {
     overflow: hidden
 }
 .page-main .cart-summary .block {
-    margin-bottom: 0
+    margin-bottom: 0;
+    padding: 0 20px;
 }
 .cart-summary .checkout-methods-items {
-    margin: 20px 0 0;
+    margin: 20px 20px 0;
     padding: 0 15px;
     text-align: center
 }
@@ -6147,18 +6193,25 @@ body.catalog-product-compare-index .action.print {
 }
 .cart-totals tbody .mark,
 .cart-totals tfoot .mark {
-    text-align: left
+    text-align: left;
+    color: #6e6e6e;
+    font-size: 14px;
 }
 .cart.table-wrapper .cart thead tr th.col {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 15px;
-    padding-top: 24px
+	border-bottom: 3px solid #1d1d1d;
+	padding-bottom: 5px;
+	padding-top: 24px;
+	color: #838487;
+	font-weight: normal;
+	font-size: 14px;
+	padding-left: 20px;
+	text-align: left;
 }
 .cart.table-wrapper .cart tbody td {
     border: 0
 }
 .cart.table-wrapper .cart > .item {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #dbc4ad;
     position: relative
 }
 .cart.table-wrapper .col {
@@ -6167,16 +6220,17 @@ body.catalog-product-compare-index .action.print {
 .cart.table-wrapper .col.price,
 .cart.table-wrapper .col.subtotal,
 .cart.table-wrapper .col.msrp {
-    padding: 20px 11px 10px;
+    padding: 36px 11px 10px;
+    /*padding: 45px 11px 10px;*/
     text-align: center
 }
 .cart.table-wrapper .col.qty {
-    padding: 20px 11px 10px;
+    padding: 28px 11px 10px;
     text-align: center
 }
 .cart.table-wrapper .col.qty .input-text {
     height: 36px;
-    margin-top: -7px;
+    margin-top: 0px;
     text-align: center;
     width: 45px
 }
@@ -6193,7 +6247,7 @@ body.catalog-product-compare-index .action.print {
 }
 .cart.table-wrapper .item .col.item {
     display: block;
-    min-height: 75px;
+    min-height: 120px;
     padding: 15px 15px 10px 90px;
     position: relative
 }
@@ -6309,7 +6363,7 @@ body.catalog-product-compare-index .action.print {
 .order-items.table-wrapper .col.subtotal,
 .cart.table-wrapper .col.msrp,
 .order-items.table-wrapper .col.msrp {
-    text-align: right
+    text-align: left;
 }
 .block.crosssell {
     padding: 0 15px;
@@ -12026,17 +12080,30 @@ fieldset[disabled] .sidebar .block-addbysku .action.remove {
         -ms-flex-direction: column;
         flex-direction: column
     }
-    .catalog-product-view .product.media {
+    .catalog-product-view .product.media, .page-title-wrapper.product {
         -ms-flex-order: -1;
         -webkit-order: -1;
         order: -1
     }
+.page-title-wrapper.product h1 {
+	font-size: 25px;
+	margin-bottom: 20px;
+	color: #1d1d1d;
+	font-weight: bold;
+}
+.product.data.items > .item.content {
+	background: #f6f6f6;
+	margin-top: 0;
+	padding: 30px;
+	border-top: 1px solid #e1b688;
+}
     .compare.wrapper,
     [class*='block-compare'] {
         display: none
     }
     .cart-container .form-cart .actions.main {
-        text-align: center
+        text-align: right;
+        padding: 0 10px;
     }
     .cart-discount {
         border-bottom: 1px solid #ccc
@@ -12068,7 +12135,10 @@ fieldset[disabled] .sidebar .block-addbysku .action.remove {
         content: attr(data-th);
         display: block;
         font-weight: 600;
-        padding-bottom: 10px
+        padding-bottom: 10px;
+        color: #838487;
+        font-size: 14px;
+        font-weight: normal;
     }
     .cart.table-wrapper .col.msrp {
         white-space: normal

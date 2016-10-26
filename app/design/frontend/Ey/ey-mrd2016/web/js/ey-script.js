@@ -1,4 +1,24 @@
 require(["jquery"], function($){
+	if (jQuery('button.button').length) {
+		jQuery('button.deduct').click(function(){
+			var oldValue = jQuery('#qty').val();
+			// Don't let #qty get lower than 0
+			if (oldValue > 0) {
+				var newVal = parseInt(oldValue - 1);
+				
+			} else {
+				newVal = 0;
+			}
+			jQuery('#qty').val(newVal);
+			return false;
+		});
+		jQuery('button.add').click(function(){
+			var oldValue = parseInt(jQuery('#qty').val());
+			var newVal = parseInt(oldValue + 1);
+			jQuery('#qty').val(newVal);
+			return false;
+		});
+	}
 	jQuery('.nav-sections').on('swipeleft swiperight', function(e){
 		e.stopPropagation();
 		e.preventDefault();
