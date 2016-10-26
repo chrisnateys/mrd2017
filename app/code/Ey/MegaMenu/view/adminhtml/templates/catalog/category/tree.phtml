@@ -1,0 +1,96 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+/** @var $block Ey\MegaMenu\Block\Adminhtml\Category\Tree */
+?>
+<div class="categories-side-col">
+    <div class="tree-title" style="color: #303030;font-size: 14px;font-weight: 600;line-height: 3.2rem;padding-bottom: 20px;">
+        <?php echo /* @escapeNotVerified */ __('Select Subcategories'); ?>
+    </div>
+    <?php if ($block->getRoot()): ?>
+    <div class="tree-holder">
+        <div id="megamenu-tree-div" class="tree-wrapper">
+            <ul id="tree-parent">
+                <?php $categoryTree = $block->getTree($block->getCategory()) ?>
+                <?php foreach($categoryTree as $category): ?>
+                    <li data-id="<?php echo $category['id']; ?>"
+                        data-name="<?php echo $category['name']; ?>"
+                        data-url="<?php echo $category['url']; ?>"
+                        data-level="0"
+                        data-jstree='{"opened":true}'><?php echo $category['text']; ?>
+                        <?php if (isset($category['children'])): ?>
+                            <ul id="tree-children">
+                                <?php foreach($category['children'] as $child): ?>
+                                    <li data-id="<?php echo $child['id']; ?>"
+                                        data-name="<?php echo $child['name']; ?>"
+                                        data-url="<?php echo $child['url']; ?>"
+                                        data-level="1"
+                                        aria-selected="true"
+                                        data-jstree='{"opened":true}'><?php echo $child['text']; ?>
+                                        <?php if (isset($child['children'])): ?>
+                                            <ul id="tree-children-2">
+                                                <?php foreach($child['children'] as $child2): ?>
+                                                    <li data-id="<?php echo $child2['id']; ?>"
+                                                        data-name="<?php echo $child2['name']; ?>"
+                                                        data-url="<?php echo $child2['url']; ?>"
+                                                        data-level="2"
+                                                        data-jstree='{"opened":true}'><?php echo $child2['text']; ?>
+                                                        <?php if (isset($child2['children'])): ?>
+                                                            <ul id="tree-children-3">
+                                                                <?php foreach($child2['children'] as $child3): ?>
+                                                                    <li data-id="<?php echo $child3['id']; ?>"
+                                                                        data-name="<?php echo $child3['name']; ?>"
+                                                                        data-url="<?php echo $child3['url']; ?>"
+                                                                        data-level="3"
+                                                                        data-jstree='{"opened":true}'><?php echo $child3['text']; ?></li>
+                                                                <?php endforeach; ?>
+                                                            </ul>
+                                                        <?php endif; ?>
+                                                    </li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                        <?php endif; ?>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    require([
+        'jquery',
+        'jsTree'
+    ], function ($) {
+        $(function () {
+            var objTree = $('#megamenu-tree-div');
+            objTree.jstree({
+                "plugins" : [ "checkbox" ],
+                "checkbox": { "three_state" : false }
+            });
+
+            objTree.on('changed.jstree', function (e, data) {
+                var v = objTree.jstree(true).get_json('#', {flat:true});
+                var result = JSON.stringify(v);
+                $('[name="general[megamenu_tree]"]').val(result);
+            }).jstree();
+
+            <?php if($tree = $block->getCategory()->getMegamenuTree()): ?>
+                <?php $tree = json_decode($tree); ?>
+                <?php foreach ($tree as $item): ?>
+                    <?php if($item->state->selected == true): ?>
+                        objTree.jstree("check_node", $('#<?php echo $item->id ?>'));
+                    <?php endif; ?>
+                <?php endforeach ?>
+            <?php endif; ?>
+        });
+    });
+</script>
+<?php endif; ?>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Catalog\Model\ResourceModel\Category\Tree"
+                type="Ey\MegaMenu\Model\Catalog\ResourceModel\Category\Tree" />
+    <preference for="Magento\Catalog\Plugin\Block\Topmenu"
+                type="Ey\MegaMenu\Plugin\Block\Topmenu" />
+    <type name="Magento\Catalog\Model\Category\DataProvider">
+        <plugin name="category_data_provider" type="Ey\MegaMenu\Plugin\Category\DataProvider" sortOrder="1"
+                disabled="false" />
+    </type>
+</config>
