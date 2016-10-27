@@ -17,7 +17,8 @@ class MegaMenu extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * @var int
      */
-    protected $rowCount = 10;
+    // protected $rowCount = 7;
+    // protected $rowCount = $this->getColCount();
 
     /**
      * @var \Magento\Framework\Data\Tree\Node
@@ -82,7 +83,7 @@ class MegaMenu extends \Magento\Framework\App\Helper\AbstractHelper
                         $this->_node->getData($matches[1][$key])
                     )->toHtml();
                     $html = preg_replace($regex, $valueVal, $html);
-                } elseif($this->_node->hasData($matches[1][$key])){
+            	} elseif($this->_node->hasData($matches[1][$key])){
                     $valueVal = $this->_node->getData($matches[1][$key]);
                     $html = preg_replace($regex, $valueVal, $html);
                 } else{
@@ -106,12 +107,11 @@ class MegaMenu extends \Magento\Framework\App\Helper\AbstractHelper
         $child = $this->_getChildren($id);
         if(count($child) > 0){
             $html .= '<div class="mega-menu-1">';
-            $html .= '<a href="'.$child['url'].'">'.$child['name'].'</a>';
+            
             if(isset($child['children'])){
                 $html .= '<div class="mega-menu-2">';
-
                 $collectionSize = count($child['children']);
-                $rowCount = $this->getRowCount();
+                $rowCount = $this->getColCount();
                 $i = 0;
                 $colCount = ceil($collectionSize/$rowCount);
                 foreach ($child['children'] as $childChild){
@@ -125,6 +125,7 @@ class MegaMenu extends \Magento\Framework\App\Helper\AbstractHelper
                         $html .= '</div>';
                     }
                 }
+                $html .= '<a href="'.$child['url'].'">'.$child['name'].'</a>';
                 $html .= '</div>';
             }
             $html .= '</div>';
@@ -133,6 +134,25 @@ class MegaMenu extends \Magento\Framework\App\Helper\AbstractHelper
         return $html;
     }
 
+    public function getColCount() {
+    	$html = $this->_node->getMegamenuHtml();
+        $matches = array();
+        $success = preg_match_all(self::$eyRegex, $html, $matches);
+        if ($success) {
+        	foreach($matches[0] as $key => $match){
+                $regex = '|'.preg_quote($match).'|';
+                if(strpos($matches[1][$key], 'row-count') !== false){
+                	// echo "asdfasdfasdf";
+                    $valueVal = $matches[1][$key];
+                    return substr(strrchr($valueVal, "-"), 1);
+                } else {
+                	return 10;
+                }
+            }
+        } else {
+        	return 10;
+        }
+    }
     /**
      * @param null|string $id
      * @return array|\Magento\Framework\Data\Tree\Node\Collection
@@ -166,11 +186,4 @@ class MegaMenu extends \Magento\Framework\App\Helper\AbstractHelper
         return $this->_children;
     }
 
-    /**
-     * @return int
-     */
-    public function getRowCount()
-    {
-        return $this->rowCount;
-    }
 }

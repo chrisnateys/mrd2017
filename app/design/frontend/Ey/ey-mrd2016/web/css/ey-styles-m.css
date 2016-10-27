@@ -4742,6 +4742,9 @@ body._has-modal-custom .modal-custom-overlay {
     display: inline-block;
     vertical-align: top
 }
+.box-tocart .paypal {
+	display: none;
+}
 .block-minicart .paypal,
 .cart-summary .paypal {
     display: block
@@ -11902,11 +11905,13 @@ fieldset[disabled] .sidebar .block-addbysku .action.remove {
         margin: 0
     }
     .navigation a {
-        display: block;
-        padding-top: 10px;
-        padding-right: 0;
-        padding-bottom: 10px;
-        padding-left: 15px
+		display: inline-block;
+		padding-top: 10px;
+		padding-right: 0;
+		padding-bottom: 10px;
+		padding-left: 15px;
+		vertical-align: middle;
+		width: 200px;
     }
     .navigation a,
     .navigation a:hover {
@@ -11924,6 +11929,7 @@ fieldset[disabled] .sidebar .block-addbysku .action.remove {
 	word-wrap: break-word;
 	color: #404043;
 	font-size: 17px;
+	width: 260px;
 }
     .navigation .level0.active .all-category .ui-state-focus {
         border-color: #ff5501;

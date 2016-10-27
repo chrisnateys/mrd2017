@@ -579,14 +579,15 @@ print {
         display: none
     }
 .nav-sections-item-content {
-	display: inline-block;
-	position: relative;
+	display: block;
+	position: static;
 	background-color: transparent;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	width: 100%;
+	clear: none;
+	float: left;
 }
     .nav-sections-item-content > * {
         display: none
@@ -601,7 +602,7 @@ print {
         left: auto;
         overflow: inherit;
         padding: 0;
-        position: relative;
+        position: static;
         top: 0;
         width: 100%;
         z-index: 3
@@ -613,7 +614,7 @@ print {
         margin-top: 0;
         margin-bottom: 0;
         padding: 0;
-        position: relative
+        position: static
     }
     .navigation li.level0 {
         border-top: none
@@ -621,7 +622,7 @@ print {
     .navigation .level0 {
         margin: 0;
         display: inline-block;
-        position: relative
+        position: static
     }
     .navigation .level0:last-child {
         margin-right: 0;
@@ -662,7 +663,7 @@ print {
         font-weight: 400;
         min-width: 230px;
         padding: 15px 0;
-        display: none;
+        display: none !important;
         left: 0;
         margin: 0 !important;
         padding: 0;

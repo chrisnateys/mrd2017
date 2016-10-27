@@ -22,9 +22,13 @@ use Magento\Catalog\Model\Product\ProductList\Toolbar;
         <?php endif; ?>
 <div class="toolbar-categoryname"><h1>
 <?php 
-    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-    $category = $objectManager->get('Magento\Framework\Registry')->registry('current_category');//get current category
-    echo $category->getName();
+    // $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    // $category = $objectManager->get('Magento\Framework\Registry')->registry('current_category');//get current category
+    // try {
+    // 	echo $category->getName();
+    // } catch (Exception $e) {
+// DO NOTHING
+    // }
 ?>
 </h1></div>
         <?php // include ($block->getTemplateFile('Magento_Catalog::product/list/toolbar/amount.phtml')) ?>

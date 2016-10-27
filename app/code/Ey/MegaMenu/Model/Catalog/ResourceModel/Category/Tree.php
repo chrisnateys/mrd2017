@@ -3,6 +3,7 @@
 namespace Ey\MegaMenu\Model\Catalog\ResourceModel\Category;
 
 class Tree extends \Magento\Catalog\Model\ResourceModel\Category\Tree
+{
     /**
      * Add custom attributes to collection
      *

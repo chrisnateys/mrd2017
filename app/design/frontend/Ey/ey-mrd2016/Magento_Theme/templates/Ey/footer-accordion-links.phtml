@@ -1,13 +1,7 @@
 <div class="grid-wrapper">
 	<div class="grid-item large-five">
 		<h4>About MRD <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i></h4>
-		<ul>
-		<li><a href="">Item 01</a></li>
-		<li><a href="">Item 02</a></li>
-		<li><a href="">Item 03</a></li>
-		<li><a href="">Item 04</a></li>
-		<li><a href="">Item 05</a></li>
-		</ul>
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-about-links')->toHtml();?>
 	</div>
 	<div class="grid-item large-five">
 		<h4>Help Desk <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i></h4>

@@ -6,6 +6,8 @@ namespace Ey\MegaMenu\Plugin\Block;
  * Class Topmenu
  * @package Ey\MegaMenu\Plugin\Block
  */
+use Magento\Framework\Data\Tree\Node;
+
 class Topmenu extends \Magento\Catalog\Plugin\Block\Topmenu
 {
     /**

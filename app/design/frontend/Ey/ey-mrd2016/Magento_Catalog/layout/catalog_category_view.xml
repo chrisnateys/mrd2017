@@ -10,6 +10,6 @@
     <body>
         <referenceBlock name="category.image" remove="true" />
         <referenceContainer name="div.sidebar.main" remove="true"/>
-        <referenceBlock name="page.main.title" remove="true" />
+
     </body>
 </page>
