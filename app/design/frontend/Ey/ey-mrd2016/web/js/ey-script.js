@@ -1,4 +1,33 @@
 require(["jquery"], function($){
+	if (jQuery('.hp-topbanner-carousel .products-grid .product-items').length){
+		var owl = jQuery('.hp-topbanner-carousel .products-grid .product-items');
+		owl.owlCarousel({
+			responsive: {
+                0: {
+                    items: 2,
+                    dots: true,
+                    slideBy: 2
+                },
+                480: {
+                    items: 2,
+                    dots: true,
+                    slideBy: 2
+                },
+                768: {
+                	items: 3,
+                	dots: false,
+                	slideBy: 3
+                }
+            }
+		});
+		jQuery('.hp-topbanner-carousel .products-grid').append('<div class="hp-owlnav"><div class="hp-owlprev"></div><div class="hp-owlnext"></div></div>');
+		jQuery('.hp-topbanner-carousel .hp-owlprev').click(function(){
+			owl.trigger('prev.owl.carousel');
+		});
+		jQuery('.hp-topbanner-carousel .hp-owlnext').click(function(){
+			owl.trigger('next.owl.carousel');
+		});
+	}
 	if (jQuery('button.button').length) {
 		jQuery('button.deduct').click(function(){
 			var oldValue = jQuery('#qty').val();

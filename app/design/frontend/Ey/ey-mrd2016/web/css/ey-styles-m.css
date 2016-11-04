@@ -2815,12 +2815,15 @@ fieldset[disabled] .form.send.friend .action.remove {
     list-style: none none
 }
 .columns {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    /*display: -webkit-flex;*/
+    /*display: -ms-flexbox;*/
+    /*display: flex;*/
+    display: block;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    box-sizing: border-box
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
 }
 .columns:after {
     clear: both;
