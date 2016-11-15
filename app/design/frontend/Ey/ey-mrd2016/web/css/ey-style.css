@@ -272,11 +272,14 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
 .subcat-img a{display: inline-block; vertical-align: middle; }
 .subcat-img a img{display: block}
 .subcat-name a{color: #1d1d1d;  display: block; padding: 3px 0 6px; text-decoration: none; line-height: 1.1; font-size: 15px;}
-
+.page-products .product-item .old-price {
+	display: none;
+}
 
 /* IP */
 .product-info-main .product-options-bottom .price-box .price-container .price, .product-info-main .product-info-price .price-box .price-container .price{font-size: 28px; line-height: 1;}
 .stock.available > span:before {content: ''; background-image: url('../images/in-stock.png'); display: inline-block; width: 35px; height: 35px; vertical-align: middle; margin-right: 10px; }
+.stock.available > span.preorder:before {background-image: url('../images/preorderstamp.png');}
 .stock.available > span {font-size: 18px; color: #5d5d5d; text-transform: uppercase; font-weight: 500; }
 .fotorama__stage__frame .fotorama__img {padding: 15px; }
 .fotorama__stage__shaft.fotorama__grab {border: 1px solid #e9e9e9; padding: 15px; }
