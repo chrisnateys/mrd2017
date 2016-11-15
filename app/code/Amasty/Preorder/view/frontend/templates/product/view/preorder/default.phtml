@@ -25,10 +25,12 @@ if(!$block->canShowBlock()) {
         $('.product-info-stock-sku > .product.attribute.sku').after('<div class="preNote">'+preNote+'</div>');
         $('.product-info-stock-sku > .stock.available').html('<span class="preorder">Pre-Order</span>');
         $('#product-addtocart-button').prop('disabled',true);
-        $('.box-tocart').append('<div class="preorder-bootan"><span>Pre-Order Policy</span></div><input type="checkbox" name="preorder-policy" id="checkbox-preorder"><label for="checkbox-preorder">I have read and understand the pre-order policy.</label>');
+        $('.box-tocart').append('<div class="preorder-fields"><div class="preorder-bootan"><span>Pre-Order Policy</span></div><input type="checkbox" name="preorder-policy" id="checkbox-preorder"><label for="checkbox-preorder">I have read and understand the pre-order policy.</label></div>');
         $('#checkbox-preorder').change(function(){
         	if ($(this).is(":checked")) {
         		$('#product-addtocart-button').prop('disabled',false);
+        	} else {
+        		$('#product-addtocart-button').prop('disabled',true);
         	}
         });
     });

@@ -308,6 +308,36 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
 .field.choice.related {display: none; }
 .related .content .block-actions {display: none; }
 .product-item-details .you-save {display: none; }
+.preorder-bootan > span:before {
+	content: '\e605';
+	font-family: 'luma-icons';
+	margin-right: 5px;
+}
+.preorder-bootan > span {
+	color: #ca9a58;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+.preorder-bootan {
+	border: 1px solid #eeb75d;
+	display: block;
+	vertical-align: middle;
+	padding: 10px 10px;
+	margin-bottom: 10px;
+}
+input#checkbox-preorder + label {
+	font-size: 12px;
+	vertical-align: middle;
+	display: inline-block;
+	width: calc(100% - 40px);
+	line-height: 12px;
+}
+#checkbox-preorder {
+	margin-right: 5px;
+	margin-left: 5px;
+	display: inline-block;
+	vertical-align: middle;
+}
 
 /* Cart */
 .checkout-cart-index .minicart-wrapper, .checkout-index-index .minicart-wrapper,
