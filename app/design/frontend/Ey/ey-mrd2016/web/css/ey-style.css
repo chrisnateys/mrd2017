@@ -293,7 +293,7 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
 .button.add:before {content: '\e621'; font-family: "luma-icons"; color: #6f6f6f; }
 .button.deduct:before {content: "\e622"; font-family: "luma-icons"; color: #6f6f6f; }
 .qty .button {background-color: #e9e9e9; border-radius: 0; border: none; height: 37px; width: 42px; line-height: 23px; padding: 0; }
-.box-tocart .control .input-text.qty {display: inline-block; height: 36px; border: none; vertical-align: top; border: 1px solid #afafaf; box-sizing: border-box; margin-top: 1px; }
+.box-tocart .control .input-text.qty {display: inline-block; height: 37px; border: none; vertical-align: top; border: 1px solid #afafaf; box-sizing: border-box; margin-top: 0px; }
 .product-add-form .qty .label {display: inline-block; vertical-align: middle; margin: 0 20px 0 0; }
 .product-add-form .qty .control {display: inline-block; vertical-align: middle; }
 .productDescriptionTitle, #block-related-heading {color: #1d1d1d; font-size: 20px; font-weight: bold; text-transform: uppercase; padding-left: 20px; margin-bottom: 10px; }
@@ -313,6 +313,8 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
 .preorder-bootan {border: 1px solid #eeb75d; display: block; vertical-align: middle; padding: 10px 10px; margin-bottom: 10px; text-align: center; }
 input#checkbox-preorder + label {font-size: 12px; vertical-align: middle; display: inline-block; width: calc(100% - 40px); line-height: 12px; }
 #checkbox-preorder {margin-right: 5px; margin-left: 5px; display: inline-block; vertical-align: middle; }
+.modal-content p {margin-bottom: 20px; }
+.modal-content .popupSubTitles {font-weight: bold; margin-top: 0px; }
 @media all and (min-width: 1200px) {
 	.preorder-bootan {display: inline-block; margin-bottom: 0; }
 	input#checkbox-preorder + label {width: calc(100% - 180px); }

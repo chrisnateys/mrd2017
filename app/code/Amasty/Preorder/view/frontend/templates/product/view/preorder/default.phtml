@@ -39,14 +39,15 @@ if(!$block->canShowBlock()) {
     		type: 'popup',
     		responsive: true,
     		innerScroll: true,
-    		title: 'asdfasdf',
-    		buttons: [{
-    			text: $.mage.__('Close'),
-    			class: 'modalClose',
-    			click: function() {
-    				this.closeModal();
-    			}
-    		}]
+    		clickableOverlay: true,
+    		title: 'About Movie Replicas Direct Pre-Orders'
+    		// buttons: [{
+    		// 	text: $.mage.__('Close'),
+    		// 	class: 'modalClose',
+    		// 	click: function() {
+    		// 		this.closeModal();
+    		// 	}
+    		// }]
     	};
     	$('.preorder-bootan').click(function(){
     		$('.modal-preorder').modal(options).modal('openModal');
@@ -54,7 +55,6 @@ if(!$block->canShowBlock()) {
     });
 </script>
 <div class="modal-preorder">
-	<div class="popupTitle">About Movie Replicas Direct Pre-Orders</div>
 	<div class="popupSubTitles">What is a Pre-Order?</div>
 	<p>A pre-order is an order that allows you to purchase an item that is coming soon. These coming soon items will be marked as “Pre-Order” and will have an expected release date. The release dates are set up by the manufacturer and are subject to change.</p>
 	<div class="popupSubTitles">Why Pre-Order an item?</div>
