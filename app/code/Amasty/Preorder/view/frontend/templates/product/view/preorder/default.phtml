@@ -34,8 +34,23 @@ if(!$block->canShowBlock()) {
         	}
         });
     });
-    require(['jquery', 'modal'], function($){
-
+    require(['jquery', 'Magento_Ui/js/modal/modal'], function($, modal){
+    	var options = {
+    		type: 'popup',
+    		responsive: true,
+    		innerScroll: true,
+    		title: 'asdfasdf',
+    		buttons: [{
+    			text: $.mage.__('Close'),
+    			class: 'modalClose',
+    			click: function() {
+    				this.closeModal();
+    			}
+    		}]
+    	};
+    	$('.preorder-bootan').click(function(){
+    		$('.modal-preorder').modal(options).modal('openModal');
+    	});
     });
 </script>
 <div class="modal-preorder">
