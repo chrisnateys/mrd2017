@@ -46,9 +46,6 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
         <ol class="products list items product-items">
             <?php /** @var $_product \Magento\Catalog\Model\Product */ ?>
             <?php foreach ($_productCollection as $_product): ?>
-<?php 
-var_dump($_product);
-?>
                 <?php /* @escapeNotVerified */ echo($iterator++ == 1) ? '<li class="item product product-item">' : '</li><li class="item product product-item">' ?>
                 <div class="product-item-info <?php if ($_product->getPre_order() === '1') {
                         echo 'preorder';
