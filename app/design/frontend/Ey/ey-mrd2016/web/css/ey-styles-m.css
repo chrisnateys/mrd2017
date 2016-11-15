@@ -4300,6 +4300,7 @@ body._has-modal {
 }
 .modal-slide._inner-scroll .modal-footer {
     margin-top: auto
+    display: none;
 }
 .modal-slide .modal-header,
 .modal-slide .modal-content,
@@ -4372,7 +4373,7 @@ body._has-modal {
 }
 .modal-popup .modal-header {
     padding-bottom: 1.2rem;
-    padding-top: 3rem
+    padding-top: 30px;
 }
 .modal-popup .modal-footer {
     margin-top: auto;
@@ -4432,26 +4433,31 @@ fieldset[disabled] .modal-slide .action-close {
 .modal-custom .action-close > span,
 .modal-popup .action-close > span,
 .modal-slide .action-close > span {
-    border: 0;
+/*    border: 0;
     clip: rect(0, 0, 0, 0);
     height: 1px;
     margin: -1px;
     overflow: hidden;
     padding: 0;
     position: absolute;
-    width: 1px
+    width: 1px*/
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    vertical-align: middle;
+    display: none;
 }
 .modal-custom .action-close:before,
 .modal-popup .action-close:before,
 .modal-slide .action-close:before {
     -webkit-font-smoothing: antialiased;
-    font-size: 14px;
-    line-height: 14px;
-    color: #8f8f8f;
+    font-size: 24px;
+    line-height: 24px;
+    color: #db9a58;
     content: '\e616';
     font-family: 'luma-icons';
     margin: 0;
-    vertical-align: top;
+    vertical-align: middle;
     display: inline-block;
     font-weight: normal;
     overflow: hidden;
@@ -4489,7 +4495,7 @@ fieldset[disabled] .modal-slide .action-close {
     padding: 20px
 }
 .modal-slide .action-close {
-    padding: 2.1rem 3rem
+    padding: 33px
 }
 .modal-slide .page-main-actions {
     margin-bottom: -12.9rem;

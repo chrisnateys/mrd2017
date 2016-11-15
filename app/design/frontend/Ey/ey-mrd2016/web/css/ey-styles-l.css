@@ -3,6 +3,7 @@
 }
 @media all and (min-width: 768px),
 print {
+	.modal-custom .action-close > span, .modal-popup .action-close > span, .modal-slide .action-close > span {display: inline-block;}
     .abs-product-options-list-desktop dt, .block-giftregistry-shared .item-options dt {clear: left; float: left; margin: 0 10px 5px 0 }
     .block-giftregistry-shared .item-options dt:after {content: ': '}
     .abs-product-options-list-desktop dd,

@@ -301,7 +301,7 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
 #block-related-heading:before {content: ''; background-image: url("../images/product-ymal-icon.png"); display: inline-block; height: 27px; width: 28px; vertical-align: middle; margin-right: 10px; background-repeat: no-repeat; background-position: center center; }
 .product.attribute.description p {margin-bottom: 20px; color: #7a7a7a; font-size: 15px; line-height: 24px; }
 .product.attribute.description ul > li {color: #7a7a7a; margin-left: 20px; font-size: 15px; line-height: 24px; }
-.box-tocart .action.tocart {margin-bottom: 0; margin-right: 0; width: 100%; max-width: 470px; background-color: #58bcb6; color: white; text-transform: uppercase; font-size: 25px; height: 57px; padding: 0; box-shadow: -4px -4px #45908b inset; }
+.box-tocart .action.tocart {margin-bottom: 0; margin-right: 0; width: 100%; max-width: 470px; background-color: #58bcb6; color: white; text-transform: uppercase; font-size: 25px; height: 57px; padding: 0; box-shadow: -4px -4px #45908b inset; transition: 0.3s opacity;}
 #product-addtocart-button span::before {content: ''; background-image: url("../images/atc-cart.png"); display: inline-block; height: 21px; width: 21px; background-position: center center; background-repeat: no-repeat; margin-right: 10px; }
 .you-save {color: #b25252; font-size: 17px; font-style: italic; }
 .you-save .ys-label {margin-right: 5px; }
@@ -310,7 +310,9 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
 .product-item-details .you-save {display: none; }
 .preorder-bootan > span:before {content: '\e605'; font-family: 'luma-icons'; margin-right: 5px; }
 .preorder-bootan > span {color: #ca9a58; text-transform: uppercase; font-size: 12px; }
-.preorder-bootan {border: 1px solid #eeb75d; display: block; vertical-align: middle; padding: 10px 10px; margin-bottom: 10px; text-align: center; }
+.preorder-bootan {border: 1px solid #eeb75d; display: block; vertical-align: middle; padding: 10px 10px; margin-bottom: 10px; text-align: center; cursor: pointer;}
+.preorder-bootan:hover > span {color: white; }
+.preorder-bootan:hover {background-color: #eeb75d; color: white; }
 input#checkbox-preorder + label {font-size: 12px; vertical-align: middle; display: inline-block; width: calc(100% - 40px); line-height: 12px; }
 #checkbox-preorder {margin-right: 5px; margin-left: 5px; display: inline-block; vertical-align: middle; }
 .modal-content p {margin-bottom: 20px; }
