@@ -2526,6 +2526,10 @@ fieldset[disabled] .form.send.friend .action.remove {
     font-size: 18px;
     font-weight: 300
 }
+.hp-preorder-wrapper .widget .block-title strong {
+	font-size: 20px;
+	font-weight: bold;
+}
 .block-cart-failed,
 .cart-container .form-cart {
     margin-bottom: 20px
