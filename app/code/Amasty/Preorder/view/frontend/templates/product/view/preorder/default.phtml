@@ -21,8 +21,5 @@ if(!$block->canShowBlock()) {
             addToCartLabel: '<?=$block->getCartLabel()?>'
         });
         $widget.enable();
-        var preNote = $('.product-info-stock-sku > .stock.available').html();
-        $('.product-info-stock-sku > .product.attribute.sku').after('<div class="preNote">'+preNote+'</div>');
-        $('.product-info-stock-sku > .stock.available').html('<span class="preorder">Pre-Order</span>');
     });
 </script>
