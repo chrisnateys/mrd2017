@@ -324,6 +324,7 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
 	vertical-align: middle;
 	padding: 10px 10px;
 	margin-bottom: 10px;
+	text-align: center;
 }
 input#checkbox-preorder + label {
 	font-size: 12px;
@@ -337,6 +338,15 @@ input#checkbox-preorder + label {
 	margin-left: 5px;
 	display: inline-block;
 	vertical-align: middle;
+}
+@media all and (min-width: 1200px) {
+	.preorder-bootan {
+		display: inline-block;
+		margin-bottom: 0;
+	}
+	input#checkbox-preorder + label {
+		width: calc(100% - 180px);
+	}
 }
 
 /* Cart */
@@ -822,7 +832,6 @@ input#checkbox-preorder + label {
 	font-size: 10px;
 	margin-left: 5px;
 }
-
 @media all and (max-width: 1010px) {
 	.hp-shopby-wrapper .footer-txt a {
 		margin: 5px auto 0;
@@ -891,7 +900,7 @@ input#checkbox-preorder + label {
 	.navigation .level0 > .level1:before {content: "\00b7"; margin-right: 6px; font-size: 32px; line-height: 20px; color: #dbc4ad; display: inline-block; height: 20px; width: 10px; margin-left: 15px; vertical-align: middle; }
 
     /* SP 1 */
-    .breadcrumbs{display: block; margin: 0 0 15px;}
+    .breadcrumbs{display: block; margin: 10px 0 15px;}
     .subcat{width: 49%; max-width: 165px;}
     .subcat-img{height: 150px}
     .subcat-img a img{max-height: 130px}

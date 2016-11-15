@@ -2267,6 +2267,9 @@ print {
         box-sizing: border-box;
         width: 100%
     }
+    .page-wrapper > .breadcrumbs {
+    	margin-top: 10px;
+    }
     .ie10 .page-wrapper,
     .ie11 .page-wrapper {
         height: 100%
