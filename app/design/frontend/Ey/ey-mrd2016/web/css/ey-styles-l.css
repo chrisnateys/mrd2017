@@ -2494,8 +2494,8 @@ print {
         width: 20%
     }
     .page-layout-1column .block.widget .products-grid .product-item {
-        margin-left: calc((100% - 5 * (100%/6)) / 4);
-        width: 16.66666667%
+        /*margin-left: calc((100% - 5 * (100%/6)) / 4);*/
+        /*width: 16.66666667%*/
     }
     .page-layout-1column .block.widget .products-grid .product-item:nth-child(4n + 1) {
         margin-left: calc((100% - 5 * (100%/6)) / 4)

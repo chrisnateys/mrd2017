@@ -10504,7 +10504,8 @@ fieldset[disabled] .my-credit-cards-popup .action.secondary {
     margin: 0
 }
 .block.widget .product-item-info {
-    width: auto
+    width: auto;
+    padding-left: 5px;
 }
 .block.widget .pager {
     padding: 0
@@ -13170,6 +13171,6 @@ fieldset[disabled] .sidebar .block-addbysku .action.remove {
     .block.widget .products-grid .product-item,
     .page-layout-1column .block.widget .products-grid .product-item,
     .page-layout-3columns .block.widget .products-grid .product-item {
-        width: 33.33333333%
+        width: 50%;
     }
 }

@@ -192,7 +192,7 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
 .catalog-category-view h1#page-title-heading {color: #1d1d1d; font-size: 30px; position: static; top: 2px; }
 .reserveBadge:before {content: ''; background-image: url('../images/preorderstamp.png'); display: inline-block; width: 25px; height: 25px; vertical-align: middle; margin-right: 10px; background-size: contain;}
 .inStockBadge:before {content: ''; background-image: url('../images/in-stock.png'); display: inline-block; width: 25px; height: 25px; vertical-align: middle; margin-right: 10px; background-size: contain;}
-.reserveBadge, .inStockBadge {display: block; position: relative; text-align: left; color: black; text-transform: uppercase; font-size: 12px; border-top: 1px solid white; border-right: 1px solid #e9e9e9; border-bottom: 1px solid #e9e9e9; border-left: 1px solid #e9e9e9; top: -5px;}
+.reserveBadge, .inStockBadge {display: block; position: relative; text-align: left; color: black; text-transform: uppercase; font-size: 12px; border-top: 1px solid white; border-right: 1px solid #e9e9e9; border-bottom: 1px solid #e9e9e9; border-left: 1px solid #e9e9e9; top: -5px; max-width: 240px;}
 .product-item-details .amasty-preorder-note {display: none;}
 
 @media all and (min-width: 768px) {
@@ -491,10 +491,15 @@ input#checkbox-preorder + label {font-size: 12px; vertical-align: middle; displa
 }
 .hp-preorder-bg, .hp-new-bg {margin-top: 80px; }
 .hp-preorder-wrapper, .hp-new-wrapper {max-width: 1200px; margin: 0 auto; width: 100%; padding: 0 10px; position: relative; }
-.shopall {position: absolute; right: 0; color: #5cc7c1; text-transform: uppercase; font-size: 13px; font-weight: bold; }
+.shopall {position: absolute; right: 0; color: #5cc7c1; text-transform: uppercase; font-size: 13px; font-weight: bold; top: 25px;}
 .shopall:after {content: '\e608'; font-family: 'luma-icons'; font-size: 10px; margin-left: 5px; }
 .modal-preorder {display: none; }
-
+.hp-tertiary-items .inStockBadge, .hp-tertiary-items .reserveBadge, .hp-secondary-items .inStockBadge, .hp-secondary-items .reserveBadge, .hp-topbanner-carousel .inStockBadge, .hp-topbanner-carousel .reserveBadge {
+	border: none;
+}
+.hp-tertiary-items .old-price, .hp-secondary-items .old-price, .hp-topbanner-carousel .old-price {
+	display: none;
+}
 @media all and (max-width: 1010px) {
 	.hp-shopby-wrapper .footer-txt a {margin: 5px auto 0; }
 	.hp-shopby-bg .widget.block-static-block {width: 100%; }
