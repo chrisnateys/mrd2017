@@ -175,7 +175,7 @@ header.page-header .minicart-wrapper{margin-top:0}
 
 /* Sp 2 */
 .sorter-label{font-size:12px;color:#1d1d1d}
-.filter-title strong{background-color:#fff;box-shadow:none;border:1px solid #373739;font-size:12px;border-radius:0;margin-top:10px}
+.filter-title strong{background-color:#fff;box-shadow:none;border:1px solid #373739;font-size:12px;border-radius:0;}
 span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6e6e}
 .price-label + span[data-price-type="finalPrice"] span::before{content:"Sale price: ";color:#6e6e6e}
 .product-item .special-price + .old-price{display:none}

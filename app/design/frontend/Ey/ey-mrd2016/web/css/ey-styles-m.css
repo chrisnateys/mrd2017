@@ -3268,7 +3268,7 @@ body > .loading-mask {
 }
 .fieldset {
     border: 0;
-    margin: 0 0 40px;
+    margin: 0 0 20px;
     padding: 0;
     letter-spacing: -.31em
 }
@@ -4379,6 +4379,7 @@ body._has-modal {
     margin-top: auto;
     padding-bottom: 3rem;
     padding-top: 3rem
+    display: none;
 }
 .modal-popup .modal-footer-actions {
     text-align: right
@@ -5373,11 +5374,9 @@ fieldset[disabled] .action-braintree-paypal-logo {
     float: right
 }
 .page-products .sorter {
-    float: none;
-    margin-right: 0px;
-    position: absolute;
-    top: 10px;
-    right: 0;
+    float: right;
+    margin-right: 10px;
+    position: static;
     text-align: right;
 }
 .products.wrapper ~ .toolbar .sorter {
@@ -8354,10 +8353,11 @@ fieldset[disabled] .opc-estimated-wrapper .minicart-wrapper button.action.showca
     left: 0;
     line-height: 16px;
     padding: 7px 10px;
-    position: absolute;
+    position: static;
     text-align: center;
     top: 0;
-    z-index: 2
+    z-index: 2;
+    float: left;
 }
 .filter-title strong[data-count]:after {
     color: #fff;
@@ -12423,7 +12423,9 @@ fieldset[disabled] .sidebar .block-addbysku .action.remove {
         right: 3px;
         top: 10px;
         display: inline-block;
-        text-decoration: none
+        text-decoration: none;
+        padding: 19px;
+        float: right;
     }
     .filter.active .filter-title strong:after {
         -webkit-font-smoothing: antialiased;

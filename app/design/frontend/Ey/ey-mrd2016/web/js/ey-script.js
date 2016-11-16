@@ -64,4 +64,11 @@ require(["jquery"], function($){
 	jQuery('.menu-close').click(function(){
 		jQuery('.nav-sections-item-content').toggleClass('soHotRightNow');
 	});
+	jQuery(document).ready(function(){
+		if (jQuery('.amasty-preorder-note').length) {
+			jQuery('.item.product.product-item').each(function(index){
+				jQuery(this).append('<div class="reserve-badge">Pre-Order</div>');
+			});
+		}
+	});
 });
