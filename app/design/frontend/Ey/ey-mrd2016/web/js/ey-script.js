@@ -68,7 +68,8 @@ require(["jquery"], function($){
 		if (jQuery('.amasty-preorder-note').length) {
 			jQuery('.item.product.product-item').each(function(index){
 				if (jQuery(this).find('.amasty-preorder-note').length) {
-					jQuery(this).find('.product-image-container').append('<div class="reserve-badge">Pre-Order</div>');
+					// jQuery(this).find('.product-image-container').append('<div class="reserve-badge">Pre-Order</div>');
+					jQuery(this).find('.product-item-photo .inStockBadge').replaceWith('<div class="reserveBadge">Pre-Order</div>');
 				}
 			});
 		}
