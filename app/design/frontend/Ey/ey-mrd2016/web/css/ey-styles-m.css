@@ -2526,7 +2526,7 @@ fieldset[disabled] .form.send.friend .action.remove {
     font-size: 18px;
     font-weight: 300
 }
-.hp-preorder-wrapper .widget .block-title strong {
+.hp-new-wrapper .widget .block-title strong, .hp-preorder-wrapper .widget .block-title strong {
 	font-size: 20px;
 	font-weight: bold;
 }
@@ -5475,7 +5475,6 @@ fieldset[disabled] .action-braintree-paypal-logo {
 	display: inline-block;
 	max-width: 100%;
 	border: 1px solid #e9e9e9;
-	width: 100% !important;
 }
 .product-image-wrapper {
     display: block;
