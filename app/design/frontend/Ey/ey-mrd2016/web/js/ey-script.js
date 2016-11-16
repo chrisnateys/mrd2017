@@ -67,7 +67,9 @@ require(["jquery"], function($){
 	jQuery(document).ready(function(){
 		if (jQuery('.amasty-preorder-note').length) {
 			jQuery('.item.product.product-item').each(function(index){
-				jQuery(this).append('<div class="reserve-badge">Pre-Order</div>');
+				if (jQuery(this).find('.amasty-preorder-note').length) {
+					jQuery(this).find('.product-image-container').append('<div class="reserve-badge">Pre-Order</div>');
+				}
 			});
 		}
 	});
