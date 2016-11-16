@@ -84,6 +84,7 @@ header.page-header .minicart-wrapper{margin-top:0}
 .minicart-wrapper .action:before{color:#82f0e9;font-size:24px;display:block; content: url("../images/sf/cart-icon.png"); text-align: center; line-height: 1;}
 .minicart-wrapper .action:hover:before{color:#82f0e9;}
 .minicart-wrapper .action.active::before{color:#82f0e9;font-size:24px;}
+.minicart-wrapper .counter.qty {display: none;}
 
 .nav-sections{position:static}
 .footer-top .content{padding-top:10px;padding-bottom:10px}
