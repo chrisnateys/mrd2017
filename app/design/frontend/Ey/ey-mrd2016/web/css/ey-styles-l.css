@@ -2389,7 +2389,7 @@ print {
         width: 33.33333333%
     }
     .page-layout-1column .block.widget .products-grid .product-item {
-        width: 25%
+        width: 25%;
         margin: 0;
     }
     .page-layout-3columns .block.widget .products-grid .product-item {
