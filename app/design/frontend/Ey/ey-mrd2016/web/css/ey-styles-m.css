@@ -5247,6 +5247,9 @@ fieldset[disabled] .action-braintree-paypal-logo {
 .product-item .old-price {
     margin: 5px 0
 }
+.product-item-info .old-price {
+	display: none;
+}
 .product-item .old-price .price {
     font-weight: normal
 }
