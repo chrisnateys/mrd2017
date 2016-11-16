@@ -5210,7 +5210,7 @@ fieldset[disabled] .action-braintree-paypal-logo {
     text-align: center;
 }
 .page-products .product-item-info {
-    width: 240px;
+    width: 290px;
     padding-left: 5px;
 }
 .product-item-actions {
@@ -11151,7 +11151,7 @@ fieldset[disabled] .sidebar .block-addbysku .action.remove {
     }
     .pages .pages-items {
         display: block;
-        padding: 2px 40px 0;
+        padding: 0px 40px 0;
         position: relative;
         white-space: normal;
         z-index: 1
