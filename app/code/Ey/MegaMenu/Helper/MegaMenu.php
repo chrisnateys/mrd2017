@@ -114,16 +114,24 @@ class MegaMenu extends \Magento\Framework\App\Helper\AbstractHelper
                 $rowCount = $this->getColCount();
                 $i = 0;
                 $colCount = ceil($collectionSize/$rowCount);
+                $childCount = count($child['children']);
+                $childCounter = 0;
                 foreach ($child['children'] as $childChild){
                     if ($i++%$rowCount==0){
                         $html .= '<div class="mega-menu-2-column" data-col="'.$colCount.'">';
                     }
                     $html .= '<div class="mega-menu-2-div">';
                     $html .= '<a href="'.$childChild['url'].'">'.$childChild['name'].'</a>';
+                    // $html .= '<a href="'.$childChild['url'].'">'.$childChild['name'].$childCount.'+'.$childCounter.'</a>';
                     $html .= '</div>';
+                    if ($childCounter == $childCount-1) {
+                    	// $html .= '<div class="asdfasdf">ENDING</div>';
+                    	$html .= '<div class="mm-shopall"><a href="'.$child['url'].'">Shop all '.$child['name'].'</a></div>';
+                    }
                     if ($i%$rowCount==0 || $i==$collectionSize){
                         $html .= '</div>';
                     }
+                    $childCounter++;
                 }
                 $html .= '<a href="'.$child['url'].'">'.$child['name'].'</a>';
                 $html .= '</div>';
