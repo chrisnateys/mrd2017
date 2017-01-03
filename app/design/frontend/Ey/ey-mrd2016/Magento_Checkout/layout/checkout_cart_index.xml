@@ -32,5 +32,6 @@
 						template="Magento_Checkout::Ey/security-quick.phtml" />
         	</container>
         </referenceContainer>
+        <move element="cart.summary" destination="checkout.cart.container" after="cart-items"/>
     </body>
 </page>

@@ -283,7 +283,7 @@ print {
     .page-main {width: 100%; -webkit-flex-grow: 1; flex-grow: 1; -webkit-flex-shrink: 0; flex-shrink: 0; -webkit-flex-basis: auto; flex-basis: auto }
     .ie9 .page-main {width: auto }
     .columns {display: block }
-    .column.main {min-height: 300px }
+    /*.column.main {min-height: 300px }*/
     .page-layout-1column .column.main {width: 100%; -ms-flex-order: 2; -webkit-order: 2; order: 2 }
     .page-layout-3columns .column.main {width: 58.33333333%; display: inline-block; -ms-flex-order: 2; -webkit-order: 2; order: 2 }
     .page-layout-2columns-left .column.main {width: 79.16666667%; float: right; -ms-flex-order: 2; -webkit-order: 2; order: 2 }
@@ -311,7 +311,7 @@ print {
     .navigation li.level0 {border-top: none }
     .navigation .level0 {margin: 0; display: inline-block; position: static }
     .navigation .level0:last-child {margin-right: 0; padding-right: 0 }
-	.navigation .level0 > .level-top {color: #575757; line-height: 37px; padding: 0 5px; text-decoration: none; box-sizing: border-box; position: relative; border-bottom: 3px solid transparent; display: inline-block; border-top: 3px solid transparent; }
+	.navigation .level0 > .level-top {color: #575757; line-height: 37px; padding: 0 5px; text-decoration: none; box-sizing: border-box; position: relative; border-bottom: 3px solid transparent; display: inline-block; border-top: 3px solid transparent; pointer-events: none;}
     .navigation .level0 > .level-top:hover,
     .navigation .level0 > .level-top.ui-state-focus {color: #333; text-decoration: none }
 	.navigation .level0.active > .level-top, .navigation .level0.has-active > .level-top {border-color: #ff5501; border-style: solid; border-width: 3px 0 3px; color: #333; text-decoration: none; display: inline-block; border-top: 3px solid transparent; }
@@ -1671,7 +1671,7 @@ print {
         position: static
     }
     .page-layout-1column .toolbar-products {
-        position: absolute;
+        /*position: absolute;*/
         top: 0;
         width: 100%
     }
@@ -2401,6 +2401,9 @@ print {
     .sidebar .block.widget .pager .pages-item-next .action {
         margin: 0
     }
+    .modal-popup .modal-title {
+		width: calc(100% - 80px);
+	}
 }
 @media all and (min-width: 769px),
 print {
