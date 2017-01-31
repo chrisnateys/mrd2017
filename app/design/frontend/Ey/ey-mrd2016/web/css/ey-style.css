@@ -148,9 +148,10 @@ header.page-header .minicart-wrapper{margin-top:0}
 .mega-menu-2 {text-align: center; padding: 25px 0 20px; }
 .mega-menu-2-div:before{content: "\00b7"; color: #dbc4ad; font-size: 20px; line-height: 15px; display: inline-block; vertical-align: top; margin-right: 5px; }
 .mmwrap .mm-shopall a {font-style: italic; color: grey; }
-.mmwrap .mm-shopall a:hover {text-decoration: none;}
+.mmwrap .mm-shopall a:hover
 .navigation .level0 > .level-top.ui-state-active ~ .mega-menu-container {display: block; }
 .mmwrap .mm-shopall a:after {content: '\e608'; font-family: "luma-icons"; font-style: normal; font-size: 11px; padding-left: 5px; color: #dbc4ad; }
+.mmwrap .mm-shopall a:hover:after {text-decoration: none;}
 .mega-menu-2-column[data-col="5"] {width: 20%; }
 .mega-menu-2-column[data-col="4"] {width: 25%; }
 .mega-menu-2-column[data-col="3"] {width: 33%; }
@@ -169,6 +170,42 @@ header.page-header .minicart-wrapper{margin-top:0}
 .mega-menu-1 {display: inline-block; width: calc(100% - 398px); vertical-align: top; }
 .mm01 .mega-menu-1 {width: 100%; }
 .hp-shopby-wrapper .widget a {margin: 5px 5px; display: inline-block; }
+
+/* Contact Us Page */
+.cont-sm a {display: inline-block; height: 32px; width: 32px; background-image: url("../images/contact-social.png"); margin: 0 5px;}
+.cont-sm a:first-of-type {margin: 0 5px 0 0;}
+.cont-sm a:last-of-type {margin: 0 0 0 5px;}
+.cont-sm .fb {background-position: 0 0;}
+.cont-sm .tw {background-position: -42px 0;}
+.cont-sm .bl {background-position: -84px 0;}
+.cont-sm .pn {background-position: -126px 0;}
+.cont-sm .gp {background-position: -168px 0;}
+.cms-contact-us .form.contact {display: block; width: 100%; vertical-align: top; }
+.contact-rightcol {display: block; width:100%; vertical-align: middle; text-align: center; background-image: url("../images/bg-comic-full2.jpg"); padding: 20px 0; margin-top: 20px;}
+.form.contact .legend > span {font-size: 30px; font-weight: bold; text-align: center; display: inline-block; position: relative; margin: 0 auto; }
+.form.contact .legend > span:after {width: 100px; content: ''; border-bottom: 3px solid black; display: block; left: calc(50% - 50px); position: absolute; bottom: -10px; }
+.form.contact .fieldset > .legend {border-bottom: 0; text-align: center; }
+.form.contact .field.note {text-align: center; color: #7a7a7a; font-size: 15px; line-height: 23px; }
+.form.contact .field.note strong {display: block; color: #7a7a7a; font-size: 15px; font-weight: bold; padding-bottom: 5px; }
+.contact-rightcol h2 {font-size: 20px; text-transform: uppercase; font-weight: bold; margin-bottom: 10px; }
+.rightcol-content p, .cont-ph a {color: #ce9a63; font-size: 15px; font-weight: bold; text-decoration: none; }
+.cont-ad {margin: 60px 0; }
+.contact-rightcol h2:before {font-family: "FontAwesome"; font-weight: normal; margin-right: 10px; }
+.cont-sm h2:before {
+	content: '\f0e5';
+}
+.cont-ad h2:before {
+	content: '\f041';
+}
+.cont-ph h2:before {
+	content: '\f095';
+}
+.form.contact .actions-toolbar > .primary .action:last-child {background-color: #58bcb6; color: white; font-size: 19px; font-family: 'noto sans'; font-weight: normal; line-height: 44px; height: 44px; padding: 0 30px; }
+.form.contact .actions-toolbar > .primary .action:last-child span:after {
+	content: '\f1d9';
+	font-family: 'FontAwesome';
+	margin-left: 5px;
+}
 
 @media all and (max-width: 1010px) {
 	.footer-txt {display: block; margin: 0 auto; padding-bottom: 10px; width: 100%; text-align: center; }
@@ -248,6 +285,8 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
     .navigation .level0:nth-last-of-type(2) > .level-top, .navigation .level0:nth-last-of-type(-n+2) > .level-top {padding: 0; pointer-events: auto;}
     .navigation .level0 .level-top.ui-state-focus ~ .mega-menu-container {display: block; }
     .footer-gutter a, .footer-gutter a:hover {cursor: default; text-decoration: none;}
+    .cms-contact-us .form.contact {display: table-cell; width: 59%; padding-right: 5%;}
+    .contact-rightcol {display: table-cell; width: 40%; padding:0; margin:0;}
 }
 @media all and (min-width: 980px) {
     .minicart-wrapper .action::before, .minicart-wrapper .action.active::before{display: inline-block; vertical-align: top; font-size: 20px; margin-right: 3px; margin-top: 4px;}
