@@ -180,7 +180,7 @@ header.page-header .minicart-wrapper{margin-top:0}
 .cont-sm .bl {background-position: -84px 0;}
 .cont-sm .pn {background-position: -126px 0;}
 .cont-sm .gp {background-position: -168px 0;}
-.cms-contact-us .form.contact {display: block; width: 100%; vertical-align: top; }
+.cms-contact-us .form.contact {display: block; width: 100%; vertical-align: top; padding-bottom: 30px;}
 .contact-rightcol {display: block; width:100%; vertical-align: middle; text-align: center; background-image: url("../images/bg-comic-full2.jpg"); padding: 20px 0; margin-top: 20px;}
 .form.contact .legend > span {font-size: 30px; font-weight: bold; text-align: center; display: inline-block; position: relative; margin: 0 auto; }
 .form.contact .legend > span:after {width: 100px; content: ''; border-bottom: 3px solid black; display: block; left: calc(50% - 50px); position: absolute; bottom: -10px; }
@@ -201,11 +201,7 @@ header.page-header .minicart-wrapper{margin-top:0}
 	content: '\f095';
 }
 .form.contact .actions-toolbar > .primary .action:last-child {background-color: #58bcb6; color: white; font-size: 19px; font-family: 'noto sans'; font-weight: normal; line-height: 44px; height: 44px; padding: 0 30px; }
-.form.contact .actions-toolbar > .primary .action:last-child span:after {
-	content: '\f1d9';
-	font-family: 'FontAwesome';
-	margin-left: 5px;
-}
+.form.contact .actions-toolbar > .primary .action:last-child span:after {content: '\f1d9'; font-family: 'FontAwesome'; margin-left: 5px; }
 
 @media all and (max-width: 1010px) {
 	.footer-txt {display: block; margin: 0 auto; padding-bottom: 10px; width: 100%; text-align: center; }
@@ -282,7 +278,7 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
     .footer-top h4{padding: 10px 0}
     .catalog-category-view h1#page-title-heading {position: absolute; }
     .nav-sections-item-content {width: 630px; }
-    .navigation .level0:nth-last-of-type(2) > .level-top, .navigation .level0:nth-last-of-type(-n+2) > .level-top {padding: 0; pointer-events: auto;}
+    .navigation .level0:nth-last-of-type(2) > .level-top, .navigation .level0:nth-last-of-type(-n+2) > .level-top {padding: 0;}
     .navigation .level0 .level-top.ui-state-focus ~ .mega-menu-container {display: block; }
     .footer-gutter a, .footer-gutter a:hover {cursor: default; text-decoration: none;}
     .cms-contact-us .form.contact {display: table-cell; width: 59%; padding-right: 5%;}
@@ -551,6 +547,8 @@ input#checkbox-preorder + label {font-size: 12px; vertical-align: middle; displa
 }
 .hp-tertiary-items .old-price, .hp-secondary-items .old-price, .hp-topbanner-carousel .old-price {display: none; }
 .footer-gutter .grid-item:last-child a {text-decoration: underline; cursor: pointer; }
+
+
 @media all and (max-width: 1010px) {
 	.hp-shopby-wrapper .footer-txt a {margin: 5px auto 0; }
 	.hp-shopby-bg .widget.block-static-block {width: 100%; }
