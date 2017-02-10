@@ -285,7 +285,7 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
     .contact-rightcol {display: table-cell; width: 40%; padding:0; margin:0;}
 }
 @media all and (min-width: 980px) {
-    .minicart-wrapper .action::before, .minicart-wrapper .action.active::before{display: inline-block; vertical-align: top; font-size: 20px; margin-right: 3px; margin-top: 4px;}
+    .minicart-wrapper .action::before, .minicart-wrapper .action.active::before{display: inline-block; vertical-align: top; font-size: 20px; margin-right: 3px; margin-top: 4px;padding-bottom:40px;}
     .minicart-wrapper .action.active:active::before{color: #82f0e9;}
     header.page-header .header-right{width: calc(100% - 440px);}
     header.page-header .minicart-wrapper{margin: 22px 0}
