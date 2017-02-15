@@ -6461,7 +6461,8 @@ body.catalog-product-compare-index .action.print {
 .minicart-wrapper {
     display: inline-block;
     position: relative;
-    float: right
+    float: right;
+    vertical-align: middle;
 }
 .minicart-wrapper:before,
 .minicart-wrapper:after {

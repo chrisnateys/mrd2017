@@ -78,7 +78,7 @@ header.page-header .logo img{display:inline-block; height:auto; max-height:60px;
 .authorization-link:after{content:"|";color:#f7d3ad}
 header.page-header .content{padding:20px 10px}
 header.page-header .header-right{display:none}
-header.page-header .minicart-wrapper{margin-top:0}
+header.page-header .minicart-wrapper{margin-top:10px}
 .minicart-wrapper .action{color:#82f0e9; text-decoration: none;}
 .minicart-wrapper .action .text{color:inherit;font-size:20px;text-transform:uppercase;}
 .minicart-wrapper .action:before{color:#82f0e9;font-size:24px;display:block; content: url("../images/sf/cart-icon.png"); text-align: center; line-height: 1;}
@@ -285,10 +285,11 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
     .contact-rightcol {display: table-cell; width: 40%; padding:0; margin:0;}
 }
 @media all and (min-width: 980px) {
-    .minicart-wrapper .action::before, .minicart-wrapper .action.active::before{display: inline-block; vertical-align: top; font-size: 20px; margin-right: 3px; margin-top: 4px;padding-bottom:40px;}
+    .minicart-wrapper .action::before, .minicart-wrapper .action.active::before{display: inline-block; vertical-align: top; font-size: 20px; margin-right: 3px; margin-top: 4px;}
+    /*.minicart-wrapper .action::before, .minicart-wrapper .action.active::before{display: inline-block; vertical-align: top; font-size: 20px; margin-right: 3px; margin-top: 4px;padding-bottom:40px;}*/
     .minicart-wrapper .action.active:active::before{color: #82f0e9;}
     header.page-header .header-right{width: calc(100% - 440px);}
-    header.page-header .minicart-wrapper{margin: 22px 0}
+    header.page-header .minicart-wrapper{margin: 0; float:none;}
 
 	.navigation .level0 > .level-top {font-size: 15px; }
 	.navigation .level0:nth-last-of-type(2) > .level-top {margin: 0 0 0 10px;}
