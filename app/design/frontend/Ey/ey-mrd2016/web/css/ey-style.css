@@ -46,7 +46,7 @@ button,input[type=button]{width:auto;overflow:visible}
 }
 
 .multicheckout .action.primary, .order-review-form .action.primary, .bundle-actions .action.primary.customize, .bundle-options-container .block-bundle-summary .box-tocart .action.primary, .box-tocart .action.tocart, .cart-summary .checkout-methods-items .action.primary.checkout, .block-minicart .block-content > .actions > .primary .action.primary, .methods-shipping .actions-toolbar .action.primary, .block-authentication .action.action-register, .block-authentication .action.action-login, .checkout-payment-method .payment-method-content > .actions-toolbar > .primary .action.primary, .form-address-edit .actions-toolbar .action.primary,
-.action.primary, .action.primary:hover{background: #58bcb6; color: #fff; font-size: 16px; padding: 10px 15px; border-radius: 0; border:none; font-weight: normal; text-transform: uppercase; box-shadow: -4px -4px #45908b inset;}
+.action.primary, .action.primary:hover{background: #58bcb6; color: #fff; font-size: 16px; padding: 10px 15px; border-radius: 0; border:none; font-weight: normal; text-transform: uppercase; box-shadow: -4px -4px #45908b inset; height: auto;}
 .action.primary:hover{opacity: .8;}
 .action.secondary{padding: 10px 15px;}
 
@@ -383,7 +383,7 @@ input#checkbox-preorder + label {font-size: 12px; vertical-align: middle; displa
 .cart.item .product-item-name, .cart.item .product-item-name > a {text-align: left; color: #5a6364; font-size: 16px; }
 .cart.table-wrapper .col.price .price-excluding-tax .price {color: #5a6364; font-weight: normal; font-size: 18px; }
 .cart.table-wrapper .col.subtotal .price-excluding-tax .price {color: #58bcb6; font-weight: normal; font-size: 18px; }
-.actions-toolbar > .primary .action:last-child, .cart-container .form-cart .actions.main .clear, button.action.update, .cart-discount .actions-toolbar button.action.apply, .gift-options .actions-toolbar .secondary .action, .gift-options .actions-toolbar .secondary .action-cancel {background-color: #e9e9e9; border-radius: 0; border: none; color: #6f6f6f; font-size: 12px; text-transform: uppercase; font-weight: bold; height: 36px; margin: 0 0 0 0; padding: 10px 15px; }
+.actions-toolbar > .primary .action:last-child, .cart-container .form-cart .actions.main .clear, button.action.update, .cart-discount .actions-toolbar button.action.apply, .gift-options .actions-toolbar .secondary .action, .gift-options .actions-toolbar .secondary .action-cancel {background-color: #e9e9e9; border-radius: 0; border: none; color: #6f6f6f; font-size: 12px; text-transform: uppercase; font-weight: bold; height: 36px; margin: 0 0 0 0; padding: 10px 15px; box-shadow: none;}
 .cart-container .form-cart .actions.main .clear:hover, button.action.update:hover, .cart-discount .actions-toolbar button.action.apply:hover, .gift-options .actions-toolbar .secondary .action:hover, .gift-options .actions-toolbar .secondary .action-cancel:hover{text-decoration: underline; border: none; box-shadow: none; color: #6f6f6f; background-color: #e9e9e9; }
 .cart-discount .actions-toolbar button.action.apply:not(:focus) {box-shadow: none; }
 .cart-container .form-cart .actions.main .continue {display: inline-block; color: #e1b688; text-transform: uppercase; font-size: 12px; font-weight: bold; border: 1px solid #e1b688; padding: 8px 20px; float: left; }
@@ -437,7 +437,7 @@ input#checkbox-preorder + label {font-size: 12px; vertical-align: middle; displa
 .opc-wrapper input[type="text"], .opc-wrapper input[type="password"], .opc-wrapper input[type="email"], .opc-wrapper textarea{background: #fff; border-color: #afafaf;}
 .field-tooltip .field-tooltip-action::before{width: 25px;}
 #customer-email-fieldset .note{font-size: 14px; color: #58bcb6;}
-#shipping-method-buttons-container{padding: 15px 0; border-top:1px solid #dbc4ad;}
+#shipping-method-buttons-container{padding: 15px 0; border-top:1px solid #dbc4ad; width: 100%; display: block;}
 .checkout-shipping-method .actions-toolbar .action.primary{ padding: 5px 40px; text-transform: uppercase}
 /*.checkout-shipping-method .actions-toolbar .action.primary > span:before{font-family: 'FontAwesome'; content: "\f105"; margin-right: 5px; }*/
 .opc-keep-shopping, .opc-keep-shopping:hover{text-decoration: none; color: #e1b688; border:1px solid #e1b688; font-weight: bold; font-size: 12px; padding: 11px 20px; display: block; line-height: 1; }

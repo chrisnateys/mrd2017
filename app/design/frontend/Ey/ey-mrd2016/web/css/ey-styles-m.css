@@ -7533,7 +7533,8 @@ fieldset[disabled] .opc-estimated-wrapper .minicart-wrapper button.action.showca
 }
 .checkout-payment-method .ccard > .field.cvv > .control {
     display: inline-block;
-    padding-right: 20px
+    padding-right: 30px;
+    position: relative;
 }
 .checkout-payment-method .ccard .cvv .label {
     display: block
