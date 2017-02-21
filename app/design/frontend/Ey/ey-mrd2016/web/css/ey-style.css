@@ -438,6 +438,16 @@ input#checkbox-preorder + label {font-size: 12px; vertical-align: middle; displa
 .field-tooltip .field-tooltip-action::before{width: 25px;}
 #customer-email-fieldset .note{font-size: 14px; color: #58bcb6;}
 #shipping-method-buttons-container{padding: 15px 0; border-top:1px solid #dbc4ad; width: 100%; display: block;}
+.payment-methods .payment-method:first-child label.label span::after {
+	content: '';
+	background-image: url("../images/footer-cards.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 21px;
+	width: 186px;
+	vertical-align: middle;
+}
 .checkout-shipping-method .actions-toolbar .action.primary{ padding: 5px 40px; text-transform: uppercase}
 /*.checkout-shipping-method .actions-toolbar .action.primary > span:before{font-family: 'FontAwesome'; content: "\f105"; margin-right: 5px; }*/
 .opc-keep-shopping, .opc-keep-shopping:hover{text-decoration: none; color: #e1b688; border:1px solid #e1b688; font-weight: bold; font-size: 12px; padding: 11px 20px; display: block; line-height: 1; }
@@ -461,6 +471,13 @@ input#checkbox-preorder + label {font-size: 12px; vertical-align: middle; displa
 .checkout-success {margin: 30px 0 30px;}
 .checkout-success span {font-weight: bold; }
 .checkout-success p {margin-bottom: 10px; }
+.checkout-shipping-method .actions-toolbar .action.primary {
+	margin: 0;
+	background: #58bcb6;
+	color: white;
+	box-shadow: -4px -4px #45908b inset;
+	font-size: 16px;
+}
 
 /* HP */
 .owl-theme .owl-dots {text-align: center; -webkit-tap-highlight-color: transparent; }
