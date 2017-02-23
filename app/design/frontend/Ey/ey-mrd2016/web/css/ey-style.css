@@ -447,6 +447,7 @@ input#checkbox-preorder + label {font-size: 12px; vertical-align: middle; displa
 	height: 21px;
 	width: 186px;
 	vertical-align: middle;
+	margin-left: 10px;
 }
 .checkout-shipping-method .actions-toolbar .action.primary{ padding: 5px 40px; text-transform: uppercase}
 /*.checkout-shipping-method .actions-toolbar .action.primary > span:before{font-family: 'FontAwesome'; content: "\f105"; margin-right: 5px; }*/

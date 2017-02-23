@@ -4,8 +4,8 @@
     <body>
         <referenceContainer name="page.main.title" remove="false" />
 
-        <referenceContainer name="catalog.leftnav" remove="true"/>
-        <referenceContainer name="div.sidebar.additional" remove="true" />
+        <!-- <referenceContainer name="catalog.leftnav" remove="true"/> -->
+        <!-- <referenceContainer name="div.sidebar.additional" remove="true" /> -->
 
         <referenceContainer name="columns.top">
             <container name="ey.subcat.container" htmlTag="div" htmlClass="subcat-container" after="-">
