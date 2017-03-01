@@ -272,7 +272,7 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
 	.header-right > div, .header-right > div a {font-size: 13px; color: #f7d3ad; display: inline-block; vertical-align: baseline; }
 	.header-right > div {margin-right: 10px; }
 	.header.links .greet {display: none; }
-	.header.links li, .header.links li a {display: inline; font-size: 13px; color: white; margin: 0; }
+	.header.links li, .header.links li a {display: inline-block; font-size: 13px; color: white; margin: 0; }
 	.header-right .header.links {display: inline-block; }
 	header.page-header .logo, header.page-header .logo img {max-height: 72px; }
     .footer-top h4{padding: 10px 0}
@@ -283,6 +283,10 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
     .footer-gutter a, .footer-gutter a:hover {cursor: default; text-decoration: none;}
     .cms-contact-us .form.contact {display: table-cell; width: 59%; padding-right: 5%;}
     .contact-rightcol {display: table-cell; width: 40%; padding:0; margin:0;}
+    .header.links li.customer-welcome.active .customer-menu ul {background-color: #1d1d1d; }
+    .header.links li.customer-welcome.active .customer-menu ul li, .header.links li.customer-welcome.active .customer-menu ul li a {width: 100%;}
+    .header.links li.customer-welcome.active .customer-menu ul li a:active {color: white;}
+    li.customer-welcome.active .authorization-link:after {display: none;}
 }
 @media all and (min-width: 980px) {
     .minicart-wrapper .action::before, .minicart-wrapper .action.active::before{display: inline-block; vertical-align: top; font-size: 20px; margin-right: 3px; margin-top: 4px;}
@@ -320,7 +324,7 @@ span[data-price-type="finalPrice"] span::before{content:"Our Price: ";color:#6e6
 .subcat-img{height: 250px; text-align: center; padding: 10px}
 .subcat-img:before{content: ""; display: inline-block; vertical-align: middle; height: 100%; width: 0; margin-left: 0px}
 .subcat-img a{display: inline-block; vertical-align: middle; }
-.subcat-img a img{display: block}
+.subcat-img a img{display: block max-height:220px; margin: 0 auto;}
 .subcat-name a{color: #1d1d1d;  display: block; padding: 3px 0 16px; text-decoration: none; line-height: 1.1; font-size: 15px;}
 .page-products .product-item .old-price {display: none; }
 .subcat-container {display: block; clear: both; margin-top: 60px; }

@@ -9847,6 +9847,9 @@ fieldset[disabled] .magento-rma-guest-create .order-links .item a {
 .block-collapsible-nav .item {
     margin: 3px 0 0
 }
+.account .sidebar .nav.item.current {
+	background-color: white;
+}
 .block-collapsible-nav .item:first-child {
     margin-top: 0
 }
@@ -12637,7 +12640,7 @@ fieldset[disabled] .sidebar .block-addbysku .action.remove {
     .block-collapsible-nav {
         left: 0;
         position: absolute;
-        top: -21px;
+        top: 10px;
         width: 100%;
         z-index: 5
     }

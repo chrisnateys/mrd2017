@@ -109,10 +109,7 @@ print {
     .page-header .header.panel:before,
     .page-header .header.panel:after,
     .header.content:before,
-    .header.content:after {
-        content: '';
-        display: table
-    }
+    .header.content:after {content: ''; display: table }
     .abs-add-clearfix-desktop:after,
     .paypal-review .block-content:after,
     .paypal-review-discount:after,
@@ -383,23 +380,11 @@ print {
     .popup-content .fieldset .actions-toolbar .action.cancel {margin-top: 6px }
     .payment-method-braintree .cvv .field-tooltip {left: 6rem }
     .block-category-event.block:last-child {margin-bottom: 30px; padding: 10px 0 30px }
-    .block-category-event .block-title {
-        margin: 0
-    }
-    .block-category-event .block-title strong {
-        font-size: 2.4rem
-    }
-    .block-category-event .ticker li {
-        display: none;
-        margin: 0 50px
-    }
-    .block-category-event .ticker .value {
-        font-size: 6rem
-    }
-    .block-category-event .ticker .label {
-        font-size: 1.4rem;
-        text-transform: none
-    }
+    .block-category-event .block-title {margin: 0 }
+    .block-category-event .block-title strong {font-size: 2.4rem }
+    .block-category-event .ticker li {display: none; margin: 0 50px }
+    .block-category-event .ticker .value {font-size: 6rem }
+    .block-category-event .ticker .label {font-size: 1.4rem; text-transform: none }
     .block-category-event .dates .date {
         font-size: 5rem
     }
