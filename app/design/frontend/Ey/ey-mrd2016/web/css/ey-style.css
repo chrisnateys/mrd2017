@@ -75,7 +75,7 @@ footer .fa-phone {margin-right: 5px; }
 header.page-header .nav-toggle{display:none}
 header.page-header .logo{margin:0;max-width:calc(100% - 75px);max-height:60px;display:inline-block;vertical-align:middle;position:static;float:none}
 header.page-header .logo img{display:inline-block; height:auto; max-height:60px; width: auto;}
-.header.links li:nth-child(2):after {content:"|";color:#f7d3ad}
+.header.links li:nth-child(2):after {content:"|";color:#f7d3ad;display:inline-block;}
 header.page-header .content{padding:20px 10px}
 header.page-header .header-right{display:none}
 header.page-header .minicart-wrapper{margin-top:10px}
