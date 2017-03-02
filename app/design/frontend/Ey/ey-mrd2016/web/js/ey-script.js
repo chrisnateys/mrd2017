@@ -1,4 +1,12 @@
 require(["jquery"], function($){
+	jQuery('.level1.parent > a').click(function(e){
+		if(jQuery(window).width() < 768) {
+			jQuery(this).next('ul').slideToggle();
+			jQuery(this).toggleClass('ui-state-active');
+			e.stopPropagation();
+			e.preventDefault();
+		}
+	});
 	if (jQuery('.hp-topbanner-carousel .products-grid .product-items').length){
 		var owl = jQuery('.hp-topbanner-carousel .products-grid .product-items');
 		owl.owlCarousel({

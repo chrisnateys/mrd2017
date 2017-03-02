@@ -5535,7 +5535,8 @@ fieldset[disabled] .action-braintree-paypal-logo {
 }
 .product.info.detailed {
     clear: both;
-    margin-bottom: 50px
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 .product.info.detailed .additional-attributes {
     width: auto;
@@ -12032,7 +12033,7 @@ fieldset[disabled] .sidebar .block-addbysku .action.remove {
         line-height: normal
     }
     .navigation .submenu:not(:first-child).expanded {
-        display: block !important;
+        /*display: block !important;*/
         padding-right: 0;
         top: 0 !important
     }

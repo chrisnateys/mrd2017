@@ -640,7 +640,9 @@ input#checkbox-preorder + label {font-size: 12px; vertical-align: middle; displa
 	.page-layout-1column .hp-tertiary-bg .block.widget .products-grid .product-item, .page-layout-1column .hp-secondary-bg .block.widget .products-grid .product-item {height: auto;}
 	.hp-preorder-bg, .hp-new-bg {margin-top: 40px; }
 	.shopall {padding-right: 10px; }
-	
+	.parent:not(.level0) {position: relative; }
+	.level0 .parent > a:after {content: '\e622'; font-family: 'luma-icons'; font-size: 14px; float: none; margin-right: 20px; color: #575757; position: absolute; right: 0;}
+	.level0 .parent > a.ui-state-active:after {content: '\e621';}
 
     /* SP 1 */
     .breadcrumbs{display: block; margin: 10px 0 15px;}
