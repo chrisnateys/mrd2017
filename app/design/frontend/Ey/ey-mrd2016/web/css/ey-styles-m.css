@@ -4305,7 +4305,8 @@ body._has-modal {
 }
 .modal-slide._inner-scroll .modal-footer {
     margin-top: auto;
-    display: none;
+    /*display: none;*/
+    padding: 10px;
 }
 .modal-slide .modal-header,
 .modal-slide .modal-content,
@@ -6293,7 +6294,7 @@ body.catalog-product-compare-index .action.print {
 }
 .cart.table-wrapper .actions-toolbar > .action-edit,
 .cart.table-wrapper .actions-toolbar > .action-delete {
-    position: absolute;
+    /*position: absolute;*/
     right: 16px;
     top: 0;
     display: inline-block;

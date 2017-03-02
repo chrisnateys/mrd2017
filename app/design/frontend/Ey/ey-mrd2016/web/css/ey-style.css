@@ -572,7 +572,32 @@ input#checkbox-preorder + label {font-size: 12px; vertical-align: middle; displa
 }
 .hp-tertiary-items .old-price, .hp-secondary-items .old-price, .hp-topbanner-carousel .old-price {display: none; }
 .footer-gutter .grid-item:last-child a {text-decoration: underline; cursor: pointer; }
-
+.hideshare-list li span {
+	display: none;
+}
+.hideshare-list {
+	list-style: none;
+	display: inline-block;
+}
+.st-label, .hideshare-list li {
+	display: inline-block;
+	font-weight: bold;
+	font-size: 14px;
+}
+.st-label {
+	width: 87px;
+}
+.hideshare-list a {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	font-size: 20px;
+	text-align: center;
+	background-color: #e9e9e9;
+	color: #6f6f6f;
+	margin: 0 5px;
+	vertical-align: middle;
+}
 
 @media all and (max-width: 1010px) {
 	.hp-shopby-wrapper .footer-txt a {margin: 5px auto 0; }
