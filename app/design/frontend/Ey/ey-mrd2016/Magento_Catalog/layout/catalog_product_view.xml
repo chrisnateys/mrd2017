@@ -13,5 +13,8 @@
 		<move element="page.main.title" destination="content" before="product.info.main"/>
 		<move element="product.info.stock.sku" destination="product.info.main" before="product.info.price"/>
 		<referenceContainer name="product.info.extrahint" remove="true"/>
+		<referenceContainer name="product-info-main">
+			<block class="Magento\Framework\View\Element\Template" name="social.links" template="Magento_Catalog::Ey/social-links.phtml" after="-" />
+		</referenceContainer>
 	</body>
 </page>
