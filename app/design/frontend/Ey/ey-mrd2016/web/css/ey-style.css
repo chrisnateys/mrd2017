@@ -598,6 +598,15 @@ input#checkbox-preorder + label {font-size: 12px; vertical-align: middle; displa
 	margin: 0 5px;
 	vertical-align: middle;
 }
+.action.link.rss span {
+	display: none;
+}
+
+.service-item {
+	display: inline-block;
+	clear: none;
+	vertical-align: top;
+}
 
 @media all and (max-width: 1010px) {
 	.hp-shopby-wrapper .footer-txt a {margin: 5px auto 0; }

@@ -1,0 +1,83 @@
+<?php
+/**
+ * Copyright © 2016 SalesIds. All rights reserved.
+ * See COPYING.txt for license details.
+ *
+ */
+
+// @codingStandardsIgnoreFile
+?>
+
+<a
+    href="#"
+    title="<?php echo $this->getName() ?>"
+    class="<?php echo $this->getClass() ?>"
+    id="<?php echo $this->getLinkId() ?>"
+    style="<?php echo $this->getStyle() ?>"
+></a>
+
+<div id="<?php echo $this->getModalId() ?>" class="no-display salesids-socialshare">
+    <div class="message<?php if($this->hasError()):?> error<?php endif; ?>">
+        <?php foreach ($this->getErrors() as $error): ?>
+            <div><?php echo $error ?></div>
+        <?php endforeach; ?>
+    </div>
+    <div id="modal-loader" class="loading-mask no-display">
+        <div class="loader">
+            <img src="<?php /* @escapeNotVerified */ echo $block->getViewFileUrl('images/loader-1.gif'); ?>"
+                 alt="<?php /* @escapeNotVerified */ echo __('Loading...'); ?>"
+                 style="position: absolute;">
+        </div>
+    </div>
+    <form method="POST" action="<?php echo $this->getFormAction() ?>" id="form-validate">
+        <input type="hidden" value="<?php echo $this->getFormKey() ?>" name="form_key">
+        <fieldset class="fieldset form-inline">
+            <div class="field from_email required">
+                <?php if ($this->getIsLoggedIn()): ?>
+                    <label class="label" for="from_email"><?php /* @escapeNotVerified */ echo __('From') ?></label>
+                    <div class="control">
+                        <span class="from_email"><?php echo $this->getFromEmail() ?></span>
+                    </div>
+                <?php endif; ?>
+            </div>
+            <div class="field to_email required">
+                <label class="label" for="to_email"><?php /* @escapeNotVerified */ echo __('To') ?></label>
+                <div class="control">
+                    <input type="text" value="" name="to_email" data-validate="{required:true, 'validate-email':true}" />
+                </div>
+            </div>
+            <div class="field required">
+                <label class="label" for="subject"><?php /* @escapeNotVerified */ echo __('Subject') ?></label>
+                <div class="control">
+                    <input type="text" name="subject" data-validate="{required:true}" value="<?php echo $this->getSubject() ?>"/>
+                </div>
+            </div>
+            <div class="field required">
+                <label class="label" for="content"><?php /* @escapeNotVerified */ echo __('Content') ?></label>
+                <div class="control">
+                    <textarea name="body" data-validate="{required:true}"><?php echo $this->getBody() ?></textarea>
+                </div>
+            </div>
+            <?php if($this->getCaptchaHelper()->isEnabled()): ?>
+                <div class="recaptcha">
+                    <div id="g-recaptcha-<?php echo $this->getWidget()->getName() ?>"></div>
+                </div>
+            <?php endif; ?>
+        </fieldset>
+     </form>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "#form-validate": {
+            "validation": {}
+        },
+        "#<?php echo $this->getLinkId() ?>": {
+            "socialShareMailService": {
+                "modalContainer": "#<?php echo $this->getModalId() ?>",
+                "captchaElement": "g-recaptcha-<?php echo $this->getWidget()->getName() ?>",
+                "captchaKey": "<?php echo $this->getCaptchaHelper()->getPublicKey() ?>"
+            }
+        }
+    }
+</script>

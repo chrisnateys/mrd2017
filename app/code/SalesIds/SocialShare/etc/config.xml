@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 SalesIds. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <socialshare>
+            <email>
+                <allow_guest>1</allow_guest>
+                <guest_email_sender>general</guest_email_sender>
+                <email_template>socialshare_email_email_template</email_template>
+                <email_subject><![CDATA[I wanted you to see this site]]></email_subject>
+                <email_body><![CDATA[Check out this site <a href="{page.url}" title="{page.title}">{page.title}</a>]]></email_body>
+            </email>
+            <recaptcha>
+                <enabled>1</enabled>
+                <public_key />
+                <secret_key />
+            </recaptcha>
+        </socialshare>
+    </default>
+</config>

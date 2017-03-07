@@ -1,4 +1,5 @@
 require(["jquery"], function($){
+	jQuery('.salesids-socialshare').appendTo(jQuery('.product-info-main'));
 	jQuery('.level1.parent > a').click(function(e){
 		if(jQuery(window).width() < 768) {
 			jQuery(this).next('ul').slideToggle();
