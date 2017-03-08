@@ -444,7 +444,7 @@ input#checkbox-preorder + label {font-size: 12px; vertical-align: middle; displa
 .field-tooltip .field-tooltip-action::before{width: 25px;}
 #customer-email-fieldset .note{font-size: 14px; color: #58bcb6;}
 #shipping-method-buttons-container{padding: 15px 0; border-top:1px solid #dbc4ad; width: 100%; display: block;}
-.payment-methods .payment-method .payment-method-title label.label span:after {
+#checkout-payment-method-load .payment-methods .payment-method:first-child > .payment-method-title:first-child label.label span:after {
 	content: '';
 	background-image: url("../images/footer-cards.png");
 	background-position: center center;
