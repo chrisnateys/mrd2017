@@ -34,12 +34,17 @@
 			</arguments>
 		</referenceBlock>
 
+		<referenceBlock name="store.menu">
+			<block class="Magento\Theme\Block\Html\Topmenu" name="catalog.topnav" template="html/topmenu.phtml" before="-"/>
+		</referenceBlock>
+
 		<referenceContainer name="header-wrapper">
 			<container name="header-right" after="logo" htmlClass="header-right" htmlTag="div">
 				<block class="Magento\Framework\View\Element\Template" name="headerQuestionstxt" template="Magento_Theme::Ey/header-questions.phtml"/>
 			</container>
 		</referenceContainer>
 		<referenceContainer name="footer-container">
+			
 			<container name="top-footer-wrapper" as="top-footer-wrapper" htmlTag="div" htmlClass="footer-top clearfix" before="-">
 				<container name="topfooter" as="topfooter" label="Page Footer" htmlTag="div" htmlClass="footer content">
 					<block class="Magento\Framework\View\Element\Template" name="footer-accordion" template="Magento_Theme::Ey/footer-accordion-links.phtml"/>
@@ -57,6 +62,7 @@
 				<block class="Magento\Framework\View\Element\Template" name="notNewsletter" template="Magento_Theme::Ey/not-newsletter.phtml"/>
 			</container>
 		</referenceContainer>
-
+		<move element="content.top" destination="main" after="-"/>
+		
 	</body>
 </page>
