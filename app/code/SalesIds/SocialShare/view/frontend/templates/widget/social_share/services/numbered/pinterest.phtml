@@ -1,0 +1,20 @@
+<?php
+/**
+ * Copyright © 2016 SalesIds. All rights reserved.
+ * See COPYING.txt for license details.
+ *
+ * @see https://developers.pinterest.com/docs/widgets/pin-it/
+ * @see https://developers.pinterest.com/tools/widget-builder/
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<script type="text/javascript"
+    async defer
+    src="//assets.pinterest.com/js/pinit.js"
+></script>
+
+<a data-pin-do="buttonPin"<?php if($this->isTall()): ?> data-pin-tall="true"<?php endif?>
+    href="<?php echo $this->getServiceUrl() ?>"
+    data-pin-count="<?php echo $this->getNumberedType() ?>"
+></a>

@@ -1,0 +1,25 @@
+<?php
+/**
+ * Copyright © 2016 SalesIds. All rights reserved.
+ * See COPYING.txt for license details.
+ *
+ */
+
+// @codingStandardsIgnoreFile
+?>
+
+<a
+    href="#"
+    id="<?php echo $this->getLinkId() ?>"
+    title="<?php echo $this->getName() ?>"
+    class="<?php echo $this->getClass() ?>"
+    style="<?php echo $this->getStyle() ?>"
+></a>
+
+<script type="text/x-magento-init">
+    {
+        "#<?php echo $this->getLinkId() ?>": {
+            "socialShareFavoriteService": {}
+        }
+    }
+</script>
